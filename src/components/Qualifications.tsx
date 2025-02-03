@@ -10,7 +10,7 @@ const qualifications: Qualification[] = [
     institution: 'VIT Bhopal University',
     year: '2024-2028',
     image: '/assets/vit.webp',
-    driveLink: 'https://drive.google.com/certification',
+    driveLink: 'https://drive.google.com/file/d/1cWYlZHI0jWXxv-yEPpMEhR_nqZw9Ip7n/view?usp=drive_link',
     description: 'Currently, I am pursuing a B.Tech in Computer Science and Engineering with a specialization in Artificial Intelligence and Machine Learning at VIT Bhopal University. This journey has been an exciting blend of theoretical learning and hands-on experience, allowing me to explore cutting-edge technologies in AI and ML. The dynamic curriculum, combined with practical projects and research opportunities, is shaping my technical expertise and problem-solving skills.'
   },
   {
@@ -19,7 +19,7 @@ const qualifications: Qualification[] = [
     institution: 'Ramanuj Gupta Senior Secondary School',
     year: '2021-2023',
     image: '/assets/ramanuj.jpg',
-    driveLink: 'https://drive.google.com/mtech-degree',
+    driveLink: 'https://drive.google.com/file/d/1MMU-WngFawAeJ-nUddp-DgIeafcJxo_W/view?usp=drive_link',
     description: 'At Ramanuj Gupta Senior Secondary School, I pursued my higher secondary education with a focus on Science(PCM). These two years were a transformative phase, where I honed my analytical and problem-solving abilities through Physics, Chemistry, and Mathematics. The challenging curriculum, along with engaging practical applications, nurtured my curiosity and deepened my passion for technology.'
   },
   {
@@ -28,7 +28,7 @@ const qualifications: Qualification[] = [
     institution: 'Saint Vianney High School',
     year: '2008-2020',
     image: '/assets/education1.jpg',
-    driveLink: 'https://drive.google.com/btech-degree',
+    driveLink: 'https://drive.google.com/file/d/1ff4lMpsiaKbLUqjNJV608wMbNPRc9K1f/view?usp=drive_link',
     description: 'I began my educational journey at Saint Vianney School, where I studied from KG1 to Class10. During these formative years, I built a strong academic foundation, developed essential skills, and actively participated in various extracurricular activities. My time at Saint Vianney School played a crucial role in shaping my curiosity, discipline, and passion for learning, setting the stage for my future academic and personal growth.'
   }
 ];

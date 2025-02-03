@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Book, Atom, TestTube, Calculator, ArrowLeft, ExternalLink } from 'lucide-react';
+import { Book, Atom, TestTube, Calculator,Code, ArrowLeft, ExternalLink, } from 'lucide-react';
 import { cn } from '../lib/utils';
 import type { Subject, Chapter } from '../types';
  
@@ -710,7 +710,332 @@ const subjects: Subject[] = [
         ]
       }
     ]
-  }
+  },{
+    id: 'Coding',
+    name: 'Coding',
+    icon: 'Code',
+    description: 'Master all the languages',
+    chapters: [
+      {
+        id: 'aiml-1',
+        title: 'Artificial Intelligence and Machine Learning',
+        image: 'assets/aiml.png',
+        description: 'Introduction to AI and ML concepts',
+        driveLinks: [
+          // 'https://drive.google.com/part1',
+          // 'https://drive.google.com/part2',
+          // 'https://drive.google.com/part3'
+        ]
+      },
+      {
+        id: 'python-1',
+        title: 'Python Programming',
+        image: '/assets/python.webp',
+        description: 'Fundamentals of Python programming',
+        driveLinks: [
+          // 'https://drive.google.com/part1',
+          // 'https://drive.google.com/part2',
+          // 'https://drive.google.com/part3'
+        ]
+      },
+      {
+        id: 'cpp-1',
+        title: 'C++ Programming',
+        image: '/assets/cpp.png',
+        description: 'Introduction to C++ and object-oriented programming',
+        driveLinks: [
+          // 'https://drive.google.com/part1',
+          // 'https://drive.google.com/part2',
+          // 'https://drive.google.com/part3'
+        ]
+      },
+      {
+        id: 'javascript-1',
+        title: 'JavaScript',
+        image: '/assets/javascript.jpg',
+        description: 'Learn JavaScript for web development',
+        driveLinks: [
+        //   'https://drive.google.com/part1',
+        //   'https://drive.google.com/part2',
+        //   'https://drive.google.com/part3'
+         ]
+      },
+      {
+        id: 'html-1',
+        title: 'HTML',
+        image: '/assets/html.png',
+        description: 'Basics of HTML for web structuring',
+        driveLinks: [
+          // 'https://drive.google.com/part1',
+          // 'https://drive.google.com/part2',
+          // 'https://drive.google.com/part3'
+        ]
+      },
+      {
+        id: 'css-1',
+        title: 'CSS',
+        image: '/assets/css.png',
+        description: 'Styling web pages with CSS',
+        driveLinks: [
+          // 'https://drive.google.com/part1',
+          // 'https://drive.google.com/part2',
+          // 'https://drive.google.com/part3'
+        ]
+      },
+      {
+        id: 'c-1',
+        title: 'C Programming',
+        image: '/assets/c.png',
+        description: 'Introduction to C programming language',
+        driveLinks: [
+          // 'https://drive.google.com/part1',
+          // 'https://drive.google.com/part2',
+          // 'https://drive.google.com/part3'
+        ]
+      },
+      {
+        id: 'tailwind-1',
+        title: 'Tailwind CSS',
+        image: '/assets/taliwind.png',
+        description: 'Learn how to style websites using Tailwind CSS',
+        driveLinks: [
+          // 'https://drive.google.com/part1',
+          // 'https://drive.google.com/part2',
+          // 'https://drive.google.com/part3'
+        ]
+      },
+      {
+        id: 'bootstrap-1',
+        title: 'Bootstrap',
+        image: '/assets/bootstrap.png',
+        description: 'Learn Bootstrap framework for responsive web design',
+        driveLinks: [
+          // 'https://drive.google.com/part1',
+          // 'https://drive.google.com/part2',
+          // 'https://drive.google.com/part3'
+        ]
+      },
+      {
+        id: 'java-1',
+        title: 'Java Programming',
+        image: '/assets/java.png',
+        description: 'Object-oriented programming with Java',
+        driveLinks: [
+          // 'https://drive.google.com/part1',
+          // 'https://drive.google.com/part2',
+          // 'https://drive.google.com/part3'
+        ]
+      },
+      {
+        id: 'react-1',
+        title: 'React',
+        image: '/assets/react.png',
+        description: 'Learn React for front-end development',
+        driveLinks: [
+          // 'https://drive.google.com/part1',
+          // 'https://drive.google.com/part2',
+          // 'https://drive.google.com/part3'
+        ]
+      },
+      {
+        id: 'kotlin-1',
+        title: 'Kotlin',
+        image: '/assets/kotlin.avif',
+        description: 'Kotlin programming for Android development',
+        driveLinks: [
+          // 'https://drive.google.com/part1',
+          // 'https://drive.google.com/part2',
+          // 'https://drive.google.com/part3'
+        ]
+      },
+      {
+        id: 'sql-1',
+        title: 'SQL',
+        image: '/assets/sql.jpeg',
+        description: 'Learn database management using SQL',
+        driveLinks: [
+          // 'https://drive.google.com/part1',
+          // 'https://drive.google.com/part2',
+          // 'https://drive.google.com/part3'
+        ]
+      },
+      {
+        id: 'github-1',
+        title: 'GitHub & Version Control',
+        image: '/assets/github.jpg',
+        description: 'Learn Git and GitHub for version control',
+        driveLinks: [
+          // 'https://drive.google.com/part1',
+          // 'https://drive.google.com/part2',
+          // 'https://drive.google.com/part3'
+        ]
+      },
+     
+    ]
+  },
+  // {
+  //   id: 'English',
+  //   name: 'English',
+  //   icon: 'book',
+  //   description: 'Master all the languages',
+  //   chapters: [
+  //     {
+  //       id: 'aiml-1',
+  //       title: 'Artificial Intelligence and Machine Learning',
+  //       image: 'https://images.unsplash.com/photo-1581093458791-4f07e3d1ab29',
+  //       description: 'Introduction to AI and ML concepts',
+  //       driveLinks: [
+  //         'https://drive.google.com/part1',
+  //         'https://drive.google.com/part2',
+  //         'https://drive.google.com/part3'
+  //       ]
+  //     },
+  //     {
+  //       id: 'python-1',
+  //       title: 'Python Programming',
+  //       image: 'https://images.unsplash.com/photo-1580126687423-5c6846f03972',
+  //       description: 'Fundamentals of Python programming',
+  //       driveLinks: [
+  //         'https://drive.google.com/part1',
+  //         'https://drive.google.com/part2',
+  //         'https://drive.google.com/part3'
+  //       ]
+  //     },
+  //     {
+  //       id: 'cpp-1',
+  //       title: 'C++ Programming',
+  //       image: 'https://images.unsplash.com/photo-1532619187607-dcb5f34d90ed',
+  //       description: 'Introduction to C++ and object-oriented programming',
+  //       driveLinks: [
+  //         'https://drive.google.com/part1',
+  //         'https://drive.google.com/part2',
+  //         'https://drive.google.com/part3'
+  //       ]
+  //     },
+  //     {
+  //       id: 'javascript-1',
+  //       title: 'JavaScript',
+  //       image: 'https://images.unsplash.com/photo-1580910051072-24588f6dd678',
+  //       description: 'Learn JavaScript for web development',
+  //       driveLinks: [
+  //         'https://drive.google.com/part1',
+  //         'https://drive.google.com/part2',
+  //         'https://drive.google.com/part3'
+  //       ]
+  //     },
+  //     {
+  //       id: 'html-1',
+  //       title: 'HTML',
+  //       image: 'https://images.unsplash.com/photo-1508921340878-ba53e1f016ec',
+  //       description: 'Basics of HTML for web structuring',
+  //       driveLinks: [
+  //         'https://drive.google.com/part1',
+  //         'https://drive.google.com/part2',
+  //         'https://drive.google.com/part3'
+  //       ]
+  //     },
+  //     {
+  //       id: 'css-1',
+  //       title: 'CSS',
+  //       image: 'https://images.unsplash.com/photo-1537432376769-00d9ba6f2047',
+  //       description: 'Styling web pages with CSS',
+  //       driveLinks: [
+  //         'https://drive.google.com/part1',
+  //         'https://drive.google.com/part2',
+  //         'https://drive.google.com/part3'
+  //       ]
+  //     },
+  //     {
+  //       id: 'c-1',
+  //       title: 'C Programming',
+  //       image: 'https://images.unsplash.com/photo-1629429800129-15fb6d76efdb',
+  //       description: 'Introduction to C programming language',
+  //       driveLinks: [
+  //         'https://drive.google.com/part1',
+  //         'https://drive.google.com/part2',
+  //         'https://drive.google.com/part3'
+  //       ]
+  //     },
+  //     {
+  //       id: 'tailwind-1',
+  //       title: 'Tailwind CSS',
+  //       image: 'https://images.unsplash.com/photo-1624221807865-1f4ad3e238a2',
+  //       description: 'Learn how to style websites using Tailwind CSS',
+  //       driveLinks: [
+  //         'https://drive.google.com/part1',
+  //         'https://drive.google.com/part2',
+  //         'https://drive.google.com/part3'
+  //       ]
+  //     },
+  //     {
+  //       id: 'bootstrap-1',
+  //       title: 'Bootstrap',
+  //       image: 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8',
+  //       description: 'Learn Bootstrap framework for responsive web design',
+  //       driveLinks: [
+  //         'https://drive.google.com/part1',
+  //         'https://drive.google.com/part2',
+  //         'https://drive.google.com/part3'
+  //       ]
+  //     },
+  //     {
+  //       id: 'java-1',
+  //       title: 'Java Programming',
+  //       image: 'https://images.unsplash.com/photo-1627620320213-fdaa89fca6d7',
+  //       description: 'Object-oriented programming with Java',
+  //       driveLinks: [
+  //         'https://drive.google.com/part1',
+  //         'https://drive.google.com/part2',
+  //         'https://drive.google.com/part3'
+  //       ]
+  //     },
+  //     {
+  //       id: 'react-1',
+  //       title: 'React',
+  //       image: 'https://images.unsplash.com/photo-1580584126903-c17d41830450',
+  //       description: 'Learn React for front-end development',
+  //       driveLinks: [
+  //         'https://drive.google.com/part1',
+  //         'https://drive.google.com/part2',
+  //         'https://drive.google.com/part3'
+  //       ]
+  //     },
+  //     {
+  //       id: 'kotlin-1',
+  //       title: 'Kotlin',
+  //       image: 'https://images.unsplash.com/photo-1633356122545-93bcd3f9b23a',
+  //       description: 'Kotlin programming for Android development',
+  //       driveLinks: [
+  //         'https://drive.google.com/part1',
+  //         'https://drive.google.com/part2',
+  //         'https://drive.google.com/part3'
+  //       ]
+  //     },
+  //     {
+  //       id: 'sql-1',
+  //       title: 'SQL',
+  //       image: 'https://images.unsplash.com/photo-1585243861804-20c18eb09006',
+  //       description: 'Learn database management using SQL',
+  //       driveLinks: [
+  //         'https://drive.google.com/part1',
+  //         'https://drive.google.com/part2',
+  //         'https://drive.google.com/part3'
+  //       ]
+  //     },
+  //     {
+  //       id: 'github-1',
+  //       title: 'GitHub & Version Control',
+  //       image: 'https://images.unsplash.com/photo-1526374870839-85f99bfbf7c6',
+  //       description: 'Learn Git and GitHub for version control',
+  //       driveLinks: [
+  //         'https://drive.google.com/part1',
+  //         'https://drive.google.com/part2',
+  //         'https://drive.google.com/part3'
+  //       ]
+  //     },
+     
+  //   ]
+  // },
 ];
 
 const getSubjectIcon = (iconName) => {
@@ -721,10 +1046,13 @@ const getSubjectIcon = (iconName) => {
       return TestTube; // Ensure TestTube is defined
     case 'Calculator':
       return Calculator; // Ensure Calculator is defined
+    case 'Code': // Adding an icon for coding
+      return Code; // Ensure Code is defined
     default:
       return Book; // Ensure Book is defined
   }
 };
+
 
 export const Education = () => {
   const [selectedSubject, setSelectedSubject] = useState(null);
@@ -840,7 +1168,7 @@ export const Education = () => {
                 animate={{ opacity: 1, y: 0 }}
                 className="text-3xl font-bold text-black dark:text-white text-center"
               >
-                {selectedSubject.name} Curriculum
+                {selectedSubject.name} 
               </motion.h3>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">

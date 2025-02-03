@@ -63,9 +63,9 @@ export const Certifications: React.FC = () => {
             className="space-y-2"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-black dark:text-white">
-              <span className="inline-block mr-2">🏆</span>
+              <span className="inline-block mr-2"></span>
               Certifications
-              <span className="inline-block ml-2">📜</span>
+              <span className="inline-block ml-2"></span>
             </h2>
             <motion.p
               initial={{ opacity: 0 }}

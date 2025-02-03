@@ -64,13 +64,13 @@ export const Journey: React.FC = () => {
         </motion.div>
 
         <div className="relative">
-          {/* Animated Timeline Line */}
+          {/* Timeline Line */}
           <motion.div
             initial={{ height: 0 }}
             whileInView={{ height: '100%' }}
             viewport={{ once: true }}
             transition={{ duration: 1.5, ease: 'easeInOut' }}
-            className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-gradient-to-b from-blue-400 to-purple-500"
+            className="absolute left-4 md:left-1/2 w-1 bg-gradient-to-b from-blue-400 to-purple-500 md:-translate-x-1/2 z-0"
           />
 
           <div className="space-y-16">
@@ -85,8 +85,9 @@ export const Journey: React.FC = () => {
                   index % 2 === 0 ? "md:text-right" : "md:text-left"
                 )}
               >
+                {/* Content Column with spacing and z-index */}
                 <div className={cn(
-                  "flex flex-col justify-center",
+                  "flex flex-col justify-center md:px-8 pl-12 z-10", // Added z-10 here
                   index % 2 === 0 ? "md:order-1" : "md:order-2"
                 )}>
                   <div className="space-y-4">
@@ -102,10 +103,11 @@ export const Journey: React.FC = () => {
                   </div>
                 </div>
 
+                {/* Image Column */}
                 <motion.div
                   whileHover={{ scale: 1.05 }}
                   className={cn(
-                    "relative rounded-lg overflow-hidden shadow-lg",
+                    "relative rounded-lg overflow-hidden shadow-lg z-10",
                     index % 2 === 0 ? "md:order-2" : "md:order-1"
                   )}
                 >
@@ -114,7 +116,6 @@ export const Journey: React.FC = () => {
                     alt={event.title}
                     className="w-full h-64 object-cover"
                   />
-                  {/* Removed Timeline Dot */}
                 </motion.div>
               </motion.div>
             ))}
@@ -123,4 +124,4 @@ export const Journey: React.FC = () => {
       </div>
     </section>
   );
-};
+}

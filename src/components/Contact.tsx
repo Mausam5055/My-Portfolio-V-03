@@ -423,12 +423,12 @@ export const Contact: React.FC = () => {
                           >
                             Frequently Asked Questions
                           </motion.h2>
-                          <motion.div
+                          {/* <motion.div
                             initial={{ width: 0 }}
                             whileInView={{ width: "400px" }}
                             transition={{ duration: 0.8, delay: 0.2 }}
                             className="h-1 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 mx-auto rounded-full"
-                          />
+                          /> */}
                         </motion.div>
 
           <div className="max-w-2xl mx-auto space-y-4">

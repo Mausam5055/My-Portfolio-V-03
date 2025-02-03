@@ -7,7 +7,7 @@ const boxes: ContentBox[] = [
     "id": 1,
     "title": "About",
     "description": "Learn more about me and my background.",
-    "image": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjM1ODQ2NjQ0&ixlib=rb-1.2.1&q=80&w=400"
+    "image": "/assets/about2.webp"
   },
   {
     "id": 2,

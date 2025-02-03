@@ -20,7 +20,7 @@ const testimonials: Testimonial[] = [
     role: 'Tech Lead',
     company: 'Innovation Labs',
     image: '/assets/sauvik.jpg',
-    content: '✔️Mausam\'s technical expertise combined with his artistic flair produced exceptional results. She\'s a true professional who delivers beyond expectations.',
+    content: '✔️Mausam\'s technical expertise combined with his artistic flair produced exceptional results. He\'s a true professional who delivers beyond expectations.',
     rating: 4.2
   },
   {
@@ -29,7 +29,7 @@ const testimonials: Testimonial[] = [
     role: 'Product Manager',
     company: 'Tech Innovations',
     image: '/assets/priyanka.jpg',
-    content: '✔️The level of creativity and technical skill Mausam brings to projects is remarkable. She has a unique ability to transform complex ideas into beautiful, functional solutions.',
+    content: '✔️The level of creativity and technical skill Mausam brings to projects is remarkable. He has a unique ability to transform complex ideas into beautiful, functional solutions.',
     rating: 3.8
   },
   {
@@ -65,7 +65,7 @@ const testimonials: Testimonial[] = [
     role: 'Content Strategist',
     company: 'Media Group',
     image: '/assets/abhijit.jpg',
-    content: '✔️Mausam’s ability to blend storytelling with design is exceptional. She brings ideas to life in a unique way.',
+    content: '✔️Mausam’s ability to blend storytelling with design is exceptional. He brings ideas to life in a unique way.',
     rating: 4
   },
   {
@@ -83,7 +83,7 @@ const testimonials: Testimonial[] = [
     role: 'Project Coordinator',
     company: 'Global Enterprises',
     image: '/assets/raj.webp',
-    content: '✔️Mausam’s professionalism and dedication to his work are truly inspiring. She consistently delivers high-quality results.',
+    content: '✔️Mausam’s professionalism and dedication to his work are truly inspiring. He consistently delivers high-quality results.',
     rating: 3.9
   }
 ];

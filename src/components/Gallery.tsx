@@ -174,7 +174,8 @@ export const Gallery: React.FC = () => {
     id="about" 
     className="py-20 relative overflow-hidden bg-[#fffbe6] dark:bg-[radial-gradient(ellipse_at_top,_#0f172a_0%,_#1e293b_100%)]"
   >
-
+  
+  
       <div className="container mx-auto px-4">
          <motion.div
                    initial={{ opacity: 0, y: 20 }}

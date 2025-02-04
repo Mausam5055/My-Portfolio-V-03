@@ -169,35 +169,34 @@ export default function ContentBoxes({ refs }: { refs: any }) {
   return (
     <div 
       ref={containerRef} 
-      className="w-full py-10 overflow-x-auto bg-white dark:bg-gray-800 scrollbar-hide" // Added scrollbar-hide to both themes
+      className="w-full py-10 overflow-x-auto bg-white dark:bg-gray-800 scrollbar-hide scroll-snap-x scroll-snap-mandatory"
       onMouseEnter={() => setIsMouseOver(true)}
       onMouseLeave={() => setIsMouseOver(false)}
     >
-      <div className="flex gap-6">
+      <div className="flex gap-4 md:gap-6 pl-4 pr-4 md:pl-0 md:pr-0">
         <motion.div
           animate={{ x: [0, -10, 0] }}
           transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-          className="flex gap-6"
+          className="flex gap-4 md:gap-6"
         >
           {boxes.map((box) => (
             <motion.div
               key={box.id}
-              whileHover={{ scale: 1.05, y: -5 }}
-              onHoverStart={() => setHoveredBox(box.id)}
-              onHoverEnd={() => setHoveredBox(null)}
+              whileHover={{ scale: isTouchDevice ? 1 : 1.05, y: isTouchDevice ? 0 : -5 }}
+              onHoverStart={() => !isTouchDevice && setHoveredBox(box.id)}
+              onHoverEnd={() => !isTouchDevice && setHoveredBox(null)}
               onClick={() => handleBoxClick(box.id)}
-              className="flex-shrink-0 w-72 h-48 rounded-lg overflow-hidden relative group cursor-pointer"
+              className="flex-shrink-0 w-48 h-32 md:w-72 md:h-48 rounded-lg overflow-hidden relative group cursor-pointer scroll-snap-align-start"
             >
-              <img src={box.image} alt={box.title} className="w-full h-full object-cover" />
-              <div className="absolute inset-0 bg-black bg-opacity-50 transition-opacity duration-300 group-hover:bg-opacity-70">
-                <div className="p-4 h-full flex flex-col justify-between">
-                  <h3 className="text-xl font-bold text-white dark:text-gray-100">
-                    {box.title}
-                  </h3>
-                  <p className="text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-gray-200 dark:text-gray-300">
-                    {box.description}
-                  </p>
-                </div>
+              <img 
+                src={box.image} 
+                alt={box.title} 
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+              <div className="absolute bottom-0 left-0 right-0 p-2 text-white text-xs md:text-sm bg-black bg-opacity-50">
+                <h3 className="font-bold">{box.title}</h3>
+                <p className="opacity-100">{box.description}</p>
               </div>
             </motion.div>
           ))}
@@ -206,4 +205,3 @@ export default function ContentBoxes({ refs }: { refs: any }) {
     </div>
   );
 }
-

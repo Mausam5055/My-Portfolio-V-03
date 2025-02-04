@@ -106,33 +106,6 @@ Other Integrations: Telegram
 
 🔧 Installation & Setup
 1️⃣ Clone the repository:
-
-sh
-Copy
-Edit
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
-2️⃣ Install dependencies:
-
-sh
-Copy
-Edit
-npm install
-3️⃣ Start the development server:
-
-sh
-Copy
-Edit
-npm run dev
-📬 Contact Me
-🔹 GitHub → https://github.com/your-username
-🔹 LinkedIn → your-linkedin-profile
-🔹 Telegram → your-telegram-link
-
-📸 Preview Screenshot
-
-🔧 Installation & Setup
-1️⃣ Clone the repository:
 git clone https://github.com/your-username/your-repo-name.git
 cd your-repo-name
 2️⃣ Install dependencies:
@@ -143,7 +116,9 @@ npm run dev
 🔹 GitHub → https://github.com/your-username
 🔹 LinkedIn → your-linkedin-profile
 🔹 Telegram → your-telegram-link
+
 📸 Preview Screenshot
+
 
 📬 Contact Me
 🔹 GitHub → https://github.com/your-username

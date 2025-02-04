@@ -61,7 +61,7 @@ This portfolio showcases multiple sections, each designed to highlight my skills
 
 Want to explore or contribute to my portfolio? Follow these steps:
 
-1️⃣ Clone the repository: git clone https://github.com/your-username/your-repo-name.git  
+1️⃣ Clone the repository: git clone [ https://github.com/your-username/your-repo-name.git  ](https://github.com/Mausam5055/My-Portfolio-V-03)
 cd your-repo-name  
 
 2️⃣ Install dependencies: npm install  

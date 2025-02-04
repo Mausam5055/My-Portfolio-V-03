@@ -91,40 +91,49 @@ const testimonials: Testimonial[] = [
 export const Testimonials: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoScrolling, setIsAutoScrolling] = useState(true);
+  const [isMobile, setIsMobile] = useState(false);
   const autoScrollTimer = useRef<NodeJS.Timeout>();
+  const itemsPerSlide = isMobile ? 1 : 3;
 
   useEffect(() => {
-    if (autoScrollTimer.current) {
-      clearInterval(autoScrollTimer.current);
-    }
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  useEffect(() => {
+    if (autoScrollTimer.current) clearInterval(autoScrollTimer.current);
     autoScrollTimer.current = setInterval(() => {
       if (isAutoScrolling) {
-        setCurrentIndex((prev) => (prev + 1) % Math.ceil(testimonials.length / 3));
+        setCurrentIndex(prev => (prev + 1) % Math.ceil(testimonials.length / itemsPerSlide));
       }
     }, 5000);
     return () => clearInterval(autoScrollTimer.current);
-  }, [isAutoScrolling]);
+  }, [isAutoScrolling, itemsPerSlide]);
 
   const handleNext = () => {
-    setCurrentIndex((prev) => (prev + 1) % Math.ceil(testimonials.length / 3));
+    setCurrentIndex(prev => (prev + 1) % Math.ceil(testimonials.length / itemsPerSlide));
     setIsAutoScrolling(false);
     setTimeout(() => setIsAutoScrolling(true), 10000);
   };
 
   const handlePrev = () => {
-    setCurrentIndex((prev) => (prev === 0 ? Math.ceil(testimonials.length / 3) - 1 : prev - 1));
+    setCurrentIndex(prev => (prev === 0 ? Math.ceil(testimonials.length / itemsPerSlide) - 1 : prev - 1));
     setIsAutoScrolling(false);
     setTimeout(() => setIsAutoScrolling(true), 10000);
   };
 
-  const currentTestimonials = testimonials.slice(currentIndex * 3, currentIndex * 3 + 3);
+  const currentTestimonials = testimonials.slice(
+    currentIndex * itemsPerSlide,
+    currentIndex * itemsPerSlide + itemsPerSlide
+  );
 
   return (
-    <section 
-    id="contact" 
-    className="py-20 bg-[#fffbe6] dark:bg-gray-900" // Light mode: soft yellow, Dark mode: gray-900
-  >
-      <div className="container mx-auto">
+    <section id="testimonials" className="py-20 bg-[#fffbe6] dark:bg-gray-900">
+      <div className="container mx-auto px-4">
         <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}

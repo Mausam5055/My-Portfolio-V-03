@@ -1,3 +1,6 @@
+![Portfolio Preview](public/preview.jpg)
+
+
 🚀 My Portfolio (Version 3)
 
 🌟 Introduction
@@ -50,10 +53,6 @@ Other Integrations: Telegram
 🔎 mausam-git-main-mausam5055s-projects.vercel.app
 
 🔗 mausam-git-main-mausam5055s-projects.vercel.app
-
-
-
-📸 Preview Screenshot
 
 🔧 Installation & Setup
 

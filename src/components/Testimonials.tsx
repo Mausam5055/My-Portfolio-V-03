@@ -24,22 +24,22 @@ const testimonials: Testimonial[] = [
     rating: 4.2
   },
   {
-    id: '3',
- name: 'Priyanka Nath',
-    role: 'Product Manager',
-    company: 'Tech Innovations',
-    image: '/assets/priyanka.jpg',
-    content: '✔️The level of creativity and technical skill Mausam brings to projects is remarkable. He has a unique ability to transform complex ideas into beautiful, functional solutions.',
-    rating: 3.8
+//     id: '3',
+//  name: 'Priyanka Nath',
+//     role: 'Product Manager',
+//     company: 'Tech Innovations',
+//     image: '/assets/priyanka.jpg',
+//     content: '✔️The level of creativity and technical skill Mausam brings to projects is remarkable. He has a unique ability to transform complex ideas into beautiful, functional solutions.',
+//     rating: 3.8
   },
   {
-    id: '4',
-    name: 'Papiya Nath',
-    role: 'Marketing Specialist',
-    company: 'Creative Agency',
-    image: '/assets/papiya.jpg ',
-    content: '✔️Mausam has a knack for understanding client needs and delivering results that exceed expectations. Highly recommended!',
-    rating: 3
+    // id: '4',
+    // name: 'Papiya Nath',
+    // role: 'Marketing Specialist',
+    // company: 'Creative Agency',
+    // image: '/assets/papiya.jpg ',
+    // content: '✔️Mausam has a knack for understanding client needs and delivering results that exceed expectations. Highly recommended!',
+    // rating: 3
   },
   {
     id: '5',

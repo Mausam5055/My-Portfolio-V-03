@@ -1,7 +1,7 @@
+#🚀 My Portfolio (Version 3)
+
 ![Portfolio Preview](public/preview.jpg)
 
-
-🚀 My Portfolio (Version 3)
 
 🌟 Introduction
 Welcome to Version 3 of my personal portfolio! This is the most animated, interactive, and visually dynamic version yet. It features a modern, sleek UI, smooth animations, and a fully responsive design, ensuring a seamless experience across all devices. With both dark mode and light mode, users can enjoy a comfortable viewing experience tailored to their preference.

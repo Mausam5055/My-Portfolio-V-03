@@ -88,7 +88,7 @@ export const Artwork: React.FC = () => {
                 damping: 15
               }}
               onClick={() => openModal(artwork)}
-              className="group bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl cursor-pointer relative"
+              className="group bg-white dark:bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl cursor-pointer relative"
               whileHover={{ 
                 y: -8,
                 scale: 1.02,

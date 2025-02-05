@@ -62,9 +62,12 @@ const getIcon = (iconName: string) => {
 
 export const FunFacts: React.FC = () => {
   return (
-    <section 
-    id="contact" 
-    className="py-20 bg-[#fffbe6] dark:bg-gray-900" // Light mode: soft yellow, Dark mode: gray-900
+    <section
+    id="Journey"
+    className="py-20 bg-white dark:bg-[radial-gradient(circle_at_center,_#000000_0%,_#111827_100%)] relative overflow-hidden transition-colors duration-300"
+    style={{
+      backgroundColor: "rgba(255, 255, 204, 0.2)" // Slightly more visible light yellow accent
+    }}
   >
       <div className="container mx-auto px-4">
         <motion.div
@@ -105,7 +108,7 @@ export const FunFacts: React.FC = () => {
                   transition: { duration: 0.3 }
                 }}
                 className={cn(
-                  "group bg-gradient-to-br from-blue-50/50 to-purple-50/50 dark:from-gray-800 dark:to-gray-900",
+                  "group bg-gradient-to-br from-blue-50/50 to-purple-50/50 dark:from-gray-900 dark:to-gray-900",
                   "rounded-2xl p-6 border border-blue-200/30 dark:border-gray-700",
                   "shadow-xl hover:shadow-2xl backdrop-blur-sm",
                   "transform transition-all duration-300 relative",

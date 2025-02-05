@@ -93,7 +93,7 @@ export const Blog: React.FC = () => {
               viewport={{ once: true }}
               transition={{ type: 'spring', stiffness: 100 }}
               className={cn(
-                "bg-white/90 dark:bg-gray-800/80 backdrop-blur-sm",
+                "bg-white/90 dark:bg-gray-900/80 backdrop-blur-sm",
                 "rounded-xl overflow-hidden",
                 "shadow-2xl hover:shadow-[0_20px_50px_-12px_rgba(79,70,229,0.3)]",
                 "transform transition-all duration-300",

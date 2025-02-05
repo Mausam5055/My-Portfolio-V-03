@@ -89,6 +89,8 @@ const boxes: ContentBox[] = [
   }
 ];
 
+
+
 export default function ContentBoxes({ refs }: { refs: any }) {
   const [hoveredBox, setHoveredBox] = useState<number | null>(null);
   const [isMouseOver, setIsMouseOver] = useState(false);
@@ -106,18 +108,18 @@ export default function ContentBoxes({ refs }: { refs: any }) {
   // Auto scrolling logic with safety checks
   useEffect(() => {
     const container = containerRef.current;
-    if (!container) return;
+    if (!container) return; // Ensure container exists
 
-    let startX: number = 0;
-    let isSwiping: boolean = false;
+    let startX: number = 0; // Track the starting X position for touch
+    let isSwiping: boolean = false; // Track if a swipe is in progress
 
     const handleMouseMove = (event: MouseEvent) => {
-      if (!isMouseOver || !container) return;
+      if (!isMouseOver || !container) return; // Only scroll if mouse is over the boxes
       const { clientX } = event;
       const { left, right, width } = container.getBoundingClientRect();
 
-      const scrollSpeed = 15;
-      const scrollThreshold = width * 0.15;
+      const scrollSpeed = 15; // Increased speed for smoother scrolling
+      const scrollThreshold = width * 0.15; // Reduced threshold to 15% of width
 
       if (clientX < left + scrollThreshold) {
         container.scrollBy({ left: -scrollSpeed, behavior: 'smooth' });
@@ -127,23 +129,24 @@ export default function ContentBoxes({ refs }: { refs: any }) {
     };
 
     const handleTouchStart = (event: TouchEvent) => {
-      if (!container) return;
-      startX = event.touches[0].clientX;
-      isSwiping = true;
+      if (!container) return; // Safety check
+      startX = event.touches[0].clientX; // Get the initial touch position
+      isSwiping = true; // Set swiping to true
     };
 
     const handleTouchMove = (event: TouchEvent) => {
-      if (!isMouseOver || !container || !isSwiping) return;
-      event.preventDefault();
+      if (!isMouseOver || !container || !isSwiping) return; // Only scroll if mouse is over the boxes and swiping
+      event.preventDefault(); // Prevent default scrolling behavior
       const touch = event.touches[0];
-      const deltaX = touch.clientX - startX;
+      const deltaX = touch.clientX - startX; // Calculate the distance moved
 
+      // Scroll the container based on the swipe distance
       container.scrollBy({ left: -deltaX, behavior: 'smooth' });
-      startX = touch.clientX;
+      startX = touch.clientX; // Update the start position for the next move
     };
 
     const handleTouchEnd = () => {
-      isSwiping = false;
+      isSwiping = false; // Reset swiping state
     };
 
     document.addEventListener("mousemove", handleMouseMove);
@@ -164,109 +167,41 @@ export default function ContentBoxes({ refs }: { refs: any }) {
   }, [containerRef, isMouseOver]);
 
   return (
-    <section className="py-20 relative overflow-hidden bg-white dark:bg-[radial-gradient(circle_at_center,_#000000_0%,_#111827_100%)] transition-colors duration-300"
-      style={{
-        backgroundColor: "rgba(255, 255, 204, 0.05)"
-      }}>
-      {/* Section Title */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        className="mb-16 text-center space-y-4"
-      >
-        <motion.h2
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6 }}
-          className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white"
-        >
-          Explore My World
-        </motion.h2>
+    <div 
+      ref={containerRef} 
+      className="w-full py-10 overflow-x-auto bg-white dark:bg-gray-800 scrollbar-hide scroll-snap-x scroll-snap-mandatory"
+      onMouseEnter={() => setIsMouseOver(true)}
+      onMouseLeave={() => setIsMouseOver(false)}
+    >
+      <div className="flex gap-4 md:gap-6 pl-4 pr-4 md:pl-0 md:pr-0">
         <motion.div
-          initial={{ width: 0 }}
-          whileInView={{ width: "180px" }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="h-1 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 mx-auto rounded-full"
-        />
-      </motion.div>
-
-      {/* Floating Elements */}
-      <div className="absolute inset-0 pointer-events-none">
-        {[...Array(6)].map((_, i) => (
-          <motion.div
-            key={i}
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{
-              opacity: [0, 0.3, 0],
-              scale: [0, 1, 0],
-              x: Math.random() * 200 - 100,
-              y: Math.random() * 200 - 100
-            }}
-            transition={{
-              duration: 4 + Math.random() * 4,
-              repeat: Infinity,
-              ease: "easeInOut"
-            }}
-            className="absolute w-48 h-48 bg-gradient-to-br from-blue-400/10 to-purple-500/10 rounded-full blur-xl"
-            style={{
-              top: `${Math.random() * 100}%`,
-              left: `${Math.random() * 100}%`
-            }}
-          />
-        ))}
+          animate={{ x: [0, -10, 0] }}
+          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+          className="flex gap-4 md:gap-6"
+        >
+          {boxes.map((box) => (
+            <motion.div
+              key={box.id}
+              whileHover={{ scale: isTouchDevice ? 1 : 1.05, y: isTouchDevice ? 0 : -5 }}
+              onHoverStart={() => !isTouchDevice && setHoveredBox(box.id)}
+              onHoverEnd={() => !isTouchDevice && setHoveredBox(null)}
+              onClick={() => handleBoxClick(box.id)}
+              className="flex-shrink-0 w-48 h-32 md:w-72 md:h-48 rounded-lg overflow-hidden relative group cursor-pointer scroll-snap-align-start"
+            >
+              <img 
+                src={box.image} 
+                alt={box.title} 
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+              <div className="absolute bottom-0 left-0 right-0 p-2 text-white text-xs md:text-sm bg-black bg-opacity-50">
+                <h3 className="font-bold">{box.title}</h3>
+                <p className="opacity-100">{box.description}</p>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
-
-      {/* Content Boxes */}
-      <div 
-        ref={containerRef} 
-        className="w-full overflow-x-auto scrollbar-hide scroll-snap-x scroll-snap-mandatory relative z-10"
-        onMouseEnter={() => setIsMouseOver(true)}
-        onMouseLeave={() => setIsMouseOver(false)}
-      >
-        <div className="flex gap-4 md:gap-6 px-4 md:px-8">
-          <motion.div
-            animate={{ x: [0, -10, 0] }}
-            transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-            className="flex gap-4 md:gap-6"
-          >
-            {boxes.map((box) => (
-              <motion.div
-                key={box.id}
-                whileHover={{ 
-                  scale: isTouchDevice ? 1 : 1.05, 
-                  y: isTouchDevice ? 0 : -5,
-                  transition: { duration: 0.3 }
-                }}
-                onHoverStart={() => !isTouchDevice && setHoveredBox(box.id)}
-                onHoverEnd={() => !isTouchDevice && setHoveredBox(null)}
-                onClick={() => handleBoxClick(box.id)}
-                className="flex-shrink-0 w-48 h-32 md:w-72 md:h-48 rounded-xl overflow-hidden relative group cursor-pointer scroll-snap-align-start transform transition-all duration-300"
-              >
-                {/* Permanent overlay for mobile, gradient overlay for desktop */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300" />
-                
-                <img 
-                  src={box.image} 
-                  alt={box.title} 
-                  className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
-                  loading="lazy"
-                />
-                
-                {/* Content overlay - always visible on mobile, hover on desktop */}
-                <div className="absolute inset-0 flex flex-col justify-end p-3 md:p-4">
-                  <div className="md:translate-y-4 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 transition-all duration-300">
-                    <h3 className="font-bold text-white text-base md:text-xl mb-1">{box.title}</h3>
-                    <p className="text-white/90 text-sm md:text-base line-clamp-2 md:line-clamp-none">
-                      {box.description}
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </div>
-    </section>
+    </div>
   );
 }

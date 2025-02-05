@@ -171,33 +171,34 @@ export const Gallery: React.FC = () => {
 
   return (
     <section 
-    id="about" 
-    className="py-20 relative overflow-hidden bg-[#fffbe6] dark:bg-[radial-gradient(ellipse_at_top,_#0f172a_0%,_#1e293b_100%)]"
-  >
-  
-  
+      id="gallery" 
+      className="py-20 bg-white dark:bg-[radial-gradient(circle_at_center,_#000000_0%,_#111827_100%)] relative overflow-hidden transition-colors duration-300"
+      style={{
+        backgroundColor: "rgba(255, 255, 204, 0.05)" // Light yellow accent in light theme
+      }}
+    >
       <div className="container mx-auto px-4">
-         <motion.div
-                   initial={{ opacity: 0, y: 20 }}
-                   whileInView={{ opacity: 1, y: 0 }}
-                   viewport={{ once: true, margin: "-100px" }}
-                   className="mb-16 text-center space-y-4"
-                 >
-                   <motion.h2
-                     initial={{ opacity: 0, scale: 0.95 }}
-                     whileInView={{ opacity: 1, scale: 1 }}
-                     transition={{ duration: 0.6 }}
-                     className="text-4xl md:text-5xl font-bold text-black dark:text-white"
-                   >
-                    Gallery
-                   </motion.h2>
-                   <motion.div
-                     initial={{ width: 0 }}
-                     whileInView={{ width: "120px" }}
-                     transition={{ duration: 0.8, delay: 0.2 }}
-                     className="h-1 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 mx-auto rounded-full"
-                   />
-                 </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          className="mb-16 text-center space-y-4"
+        >
+          <motion.h2
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6 }}
+            className="text-4xl md:text-5xl font-bold text-black dark:text-white"
+          >
+            Gallery
+          </motion.h2>
+          <motion.div
+            initial={{ width: 0 }}
+            whileInView={{ width: "200px" }}
+            transition={{ duration: 0.8 }}
+            className="h-1 bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 mx-auto rounded-full"
+          />
+        </motion.div>
 
         <motion.div
           className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6"

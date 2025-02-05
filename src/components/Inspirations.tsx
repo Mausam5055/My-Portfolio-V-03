@@ -88,16 +88,17 @@ export const Inspirations: React.FC = () => {
     ? inspirations
     : inspirations.filter(inspiration => inspiration.category === selectedCategory);
 
-  // Determine how many inspirations to show
   const displayedInspirations = showAll ? filteredInspirations : filteredInspirations.slice(0, 3);
 
   return (
     <section 
-      id="about" 
-      className="py-20 relative overflow-hidden bg-[#fffbe6] dark:bg-[radial-gradient(ellipse_at_top,_#0f172a_0%,_#1e293b_100%)]"
+      id="inspirations" 
+      className="py-20 bg-white dark:bg-[radial-gradient(circle_at_center,_#000000_0%,_#111827_100%)] relative overflow-hidden transition-colors duration-300"
+      style={{
+        backgroundColor: "rgba(255, 255, 204, 0.05)" // Light yellow accent in light theme
+      }}
     >
       <div className="container mx-auto px-4">
-        {/* Title Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -105,9 +106,9 @@ export const Inspirations: React.FC = () => {
           className="mb-16 text-center space-y-4"
         >
           <motion.h2
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ delay: 0.2 }}
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6 }}
             className="text-4xl md:text-5xl font-bold text-black dark:text-white"
           >
             Inspirations
@@ -116,57 +117,56 @@ export const Inspirations: React.FC = () => {
             initial={{ width: 0 }}
             whileInView={{ width: "200px" }}
             transition={{ duration: 0.8 }}
-            className="h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full"
+            className="h-1 bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 mx-auto rounded-full"
           />
         </motion.div>
 
-        {/* Enhanced Category Filter */}
+        {/* Category Filter */}
         <motion.div
           className="flex flex-wrap justify-center gap-4 mb-12"
           initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1, transition: { staggerChildren: 0.1 } }}
+          whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
         >
           {categories.map((category) => (
             <motion.button
               key={category}
               initial={{ scale: 0.8, opacity: 0 }}
-              whileInView={{ scale: 1, opacity: 1, transition: { type: 'spring', stiffness: 300 } }}
-              whileHover={{ scale: 1.05, boxShadow: "0px 4px 25px -8px rgba(99,102,241,0.4)" }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => setSelectedCategory(category)}
               className={cn(
                 "px-5 py-2.5 rounded-full font-medium",
                 "flex items-center gap-2 transition-all duration-300",
-                "group relative overflow-hidden backdrop-blur-sm",
                 "border border-blue-200/30 dark:border-gray-700",
                 selectedCategory === category
-                  ? "bg-gradient-to-br from-blue-600 to-purple-600 text-white shadow-lg"
+                  ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg"
                   : "bg-white/80 dark:bg-gray-800/80 text-gray-600 dark:text-gray-300 hover:bg-blue-50/50 dark:hover:bg-gray-700/50"
               )}
             >
-              <Filter size={16} className={cn("transition-colors", selectedCategory === category ? "text-white" : "text-blue-600 dark:text-purple-400")} />
-              <span className="capitalize relative">
-                {category}
-                <motion.span
-                  className={cn("absolute bottom-0 left-0 w-0 h-px bg-gradient-to-r from-blue-400 to-purple-400", "group-hover:w-full transition-all duration-300")}
-                  animate={{ width: selectedCategory === category ? "100%" : "0%", transition: { duration: 0.3 } }}
-                />
-              </span>
+              <span className="capitalize">{category}</span>
             </motion.button>
           ))}
         </motion.div>
 
-        {/* Enhanced Inspirations Grid with Smooth Zoom */}
+        {/* Inspirations Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {displayedInspirations.map((inspiration, index) => (
             <motion.div
               key={inspiration.id}
               initial={{ opacity: 0, y: 40, scale: 0.95 }}
-              whileInView={{ opacity: 1, y: 0, scale: 1, transition: { delay: index * 0.15, type: 'spring', stiffness: 150, damping: 15 } }}
-              exit={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              whileHover={{ y: -10, scale: 1.02 }}
               viewport={{ once: true, margin: "-100px" }}
-              className={cn("bg-white/80 dark:bg-gray-800/80 rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transform transition-all duration-500 hover:-translate-y-2 relative group")}
+              transition={{ delay: index * 0.1 }}
+              className={cn(
+                "bg-white dark:bg-gray-900",
+                "rounded-xl overflow-hidden",
+                "shadow-xl hover:shadow-2xl dark:hover:shadow-[0_8px_30px_rgba(59,130,246,0.15)]",
+                "transform transition-all duration-300",
+                "border-2 border-transparent hover:border-blue-500/20 dark:border-gray-800 dark:hover:border-indigo-500/30"
+              )}
             >
                 {/* Image Section with Enhanced Zoom Animation */}
                 <div className="relative h-48 overflow-hidden">

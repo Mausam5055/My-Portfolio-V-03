@@ -95,7 +95,6 @@ export default function ContentBoxes({ refs }: { refs: any }) {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const isTouchDevice = 'ontouchstart' in window;
 
-  // Handle click to scroll to sections
   const handleBoxClick = (id: number) => {
     const sectionKeys = Object.keys(refs);
     if (sectionKeys[id - 1] && refs[sectionKeys[id - 1]].current) {
@@ -103,7 +102,6 @@ export default function ContentBoxes({ refs }: { refs: any }) {
     }
   };
 
-  // Auto scrolling logic with safety checks
   useEffect(() => {
     const container = containerRef.current;
     if (!container) return;
@@ -164,10 +162,13 @@ export default function ContentBoxes({ refs }: { refs: any }) {
   }, [containerRef, isMouseOver]);
 
   return (
-    <section className="py-20 relative overflow-hidden bg-white dark:bg-[radial-gradient(circle_at_center,_#000000_0%,_#111827_100%)] transition-colors duration-300"
+    <section 
+      id="content-boxes"
+      className="py-20 bg-white dark:bg-[radial-gradient(circle_at_center,_#000000_0%,_#111827_100%)] relative overflow-hidden transition-colors duration-300"
       style={{
         backgroundColor: "rgba(255, 255, 204, 0.05)"
-      }}>
+      }}
+    >
       {/* Section Title */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -217,7 +218,7 @@ export default function ContentBoxes({ refs }: { refs: any }) {
         ))}
       </div>
 
-      {/* Content Boxes */}
+      {/* Content Boxes Container */}
       <div 
         ref={containerRef} 
         className="w-full overflow-x-auto scrollbar-hide scroll-snap-x scroll-snap-mandatory relative z-10"
@@ -243,9 +244,10 @@ export default function ContentBoxes({ refs }: { refs: any }) {
                 onClick={() => handleBoxClick(box.id)}
                 className="flex-shrink-0 w-48 h-32 md:w-72 md:h-48 rounded-xl overflow-hidden relative group cursor-pointer scroll-snap-align-start transform transition-all duration-300"
               >
-                {/* Permanent overlay for mobile, gradient overlay for desktop */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300" />
+                {/* Background Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300" />
                 
+                {/* Image */}
                 <img 
                   src={box.image} 
                   alt={box.title} 
@@ -253,20 +255,39 @@ export default function ContentBoxes({ refs }: { refs: any }) {
                   loading="lazy"
                 />
                 
-                {/* Content overlay - always visible on mobile, hover on desktop */}
-                <div className="absolute inset-0 flex flex-col justify-end p-3 md:p-4">
-                  <div className="md:translate-y-4 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 transition-all duration-300">
-                    <h3 className="font-bold text-white text-base md:text-xl mb-1">{box.title}</h3>
+                {/* Content Overlay */}
+                <div className="absolute inset-0 flex flex-col justify-end p-4 bg-gradient-to-t from-black/80 via-black/50 to-transparent">
+                  <div className="transform transition-all duration-300">
+                    <h3 className="font-bold text-white text-lg md:text-xl mb-2">
+                      {box.title}
+                    </h3>
                     <p className="text-white/90 text-sm md:text-base line-clamp-2 md:line-clamp-none">
                       {box.description}
                     </p>
                   </div>
+                </div>
+
+                {/* Shine Effect */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-30 transition-opacity duration-500">
+                  <div className="absolute -inset-[400%] animate-[shine_3s_ease-in-out_infinite] bg-gradient-to-r from-transparent via-white/20 to-transparent" />
                 </div>
               </motion.div>
             ))}
           </motion.div>
         </div>
       </div>
+
+      {/* Shine Animation */}
+      <style jsx global>{`
+        @keyframes shine {
+          from {
+            transform: translateX(-100%) rotate(45deg);
+          }
+          to {
+            transform: translateX(100%) rotate(45deg);
+          }
+        }
+      `}</style>
     </section>
   );
 }

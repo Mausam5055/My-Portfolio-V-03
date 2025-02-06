@@ -11,6 +11,7 @@ interface NavbarProps {
 export default function Navbar({ isDark, toggleTheme, scrollToSection }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
 
+  // Ensure all sections are included
   const navItems = [
     'Home',
     'About',
@@ -19,11 +20,13 @@ export default function Navbar({ isDark, toggleTheme, scrollToSection }: NavbarP
     'Artwork',
     'Journey',
     'Blog',
- 'Contact'
+    'Projects', // Added Projects
+    'Testimonials', // Added Testimonials
+    'Contact'
   ];
 
   const handleLinkClick = (section: string) => {
-    scrollToSection(section.toLowerCase());
+    scrollToSection(section.toLowerCase()); // Ensure the section name is in lowercase
     setIsOpen(false);
   };
 

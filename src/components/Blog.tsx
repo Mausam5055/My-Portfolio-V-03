@@ -5,47 +5,80 @@ import { cn } from '../lib/utils';
 import type { BlogPost } from '../types';
 import ReactMarkdown from 'react-markdown';
 
+type BlogPost = {
+  id: string;
+  title: string;
+  image?: string;
+  videoUrl?: string;
+  excerpt: string;
+  content: string;
+  date: string;
+  author: string;
+};
+
 const blogPosts: BlogPost[] = [
   {
     id: '1',
-    title: 'The Art of Creative Coding',
-    image: 'https://images.unsplash.com/photo-1555949963-ff9fe0c870eb',
-    excerpt: 'Exploring the intersection of art and technology through creative coding...',
+    title: 'Spider-Man: Miles Morales – Ultimate Web-Swinging Experience',
+    videoUrl: 'https://www.youtube.com/embed/26QPeXoWzLM  ',
+    excerpt: 'Watch my thrilling gameplay of Spider-Man: Miles Morales with epic web-swinging and combat!',
     content: `
-# The Art of Creative Coding
-
-Creative coding is where art meets technology, where expression finds form through algorithms and interactivity...
-
-## Getting Started
-
-The journey begins with understanding the basics of programming and visual arts...
-
-## Advanced Techniques
-
-As you progress, you'll discover more sophisticated ways to create digital art...
-    `,
-    date: '2024-03-15',
+    # Spider-Man: Miles Morales – Ultimate Web-Swinging Experience
+    
+    Dive into the streets of New York as I play *Spider-Man: Miles Morales*!
+    This gameplay showcases:
+    
+    - Fluid web-swinging mechanics** across the city  
+    - High-energy combat** with electrifying Venom powers  
+    - Breathtaking visuals** and cinematic moments  
+    - Stealth missions, side quests, and open-world exploration**  
+    
+    Watch as Miles takes on enemies, saves the city, and embraces his role as Spider-Man! 🕷️🔥
+    `
+    ,
+    date: '2024-03-20',
     author: 'Mausam Kar'
   },
   {
     id: '2',
-    title: 'Design Systems in Modern Web Development',
-    image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97',
-    excerpt: 'Building scalable and consistent design systems for the modern web...',
-    content: `
-# Design Systems in Modern Web Development
+title: 'BGMI – Intense Battle Royale Action',
+videoUrl: 'https://www.youtube.com/embed/W5ueSz1I9cY  ',
+excerpt: 'Epic BGMI gameplay showcasing intense gunfights and survival tactics!',
+content: `
+# BGMI – Battlegrounds Mobile India Gameplay
 
-A comprehensive design system is the foundation of any successful digital product...
+Watch my action-packed BGMI gameplay featuring:
 
-## Core Components
+- **High-intensity gunfights** and tactical strategies  
+- **Survival techniques** to secure the Chicken Dinner  
+- **Sniping, close combat, and team coordination**  
+- **Exciting moments in classic and TDM matches**  
 
-Every design system needs these essential building blocks...
+Experience the thrill of BGMI as I take on enemies, explore maps, and push for victory! 🎯🔥
+`
+,
+    date: '2024-03-18',
+    author: 'Mausam Kar'
+  },
+  {
+    id: '3',
+title: 'Asphalt 9: Legends – High-Speed Racing Action',
+videoUrl: 'https://www.youtube.com/embed/diznkP7_iEo ',
+excerpt: 'Experience the adrenaline rush of Asphalt 9: Legends with breathtaking races and stunning visuals!',
+content: `
+# Asphalt 9: Legends – Ultimate Racing Experience
 
-## Implementation Strategies
+Get ready for high-speed action in my *Asphalt 9: Legends* gameplay! This video features:
 
-Learn how to effectively implement your design system...
-    `,
-    date: '2024-03-10',
+- **Thrilling arcade-style racing** with stunning graphics  
+- **Nitro boosts, drifts, and jumps** for insane speed  
+- **Exotic supercars** and intense multiplayer showdowns  
+- **High-octane gameplay** across breathtaking locations  
+
+Watch as I race through the most exciting tracks, pulling off epic drifts and securing first place! 🏎️🔥
+`
+,
+    date: '2024-03-15',
     author: 'Mausam Kar'
   }
 ];
@@ -54,13 +87,13 @@ export const Blog: React.FC = () => {
   const [selectedPost, setSelectedPost] = useState<BlogPost | null>(null);
 
   return (
-<section
-  id="Journey"
-  className="py-20 bg-white dark:bg-[radial-gradient(circle_at_center,_#000000_0%,_#111827_100%)] relative overflow-hidden transition-colors duration-300"
-  style={{
-    backgroundColor: "rgba(255, 255, 204, 0.2)" // Slightly more visible light yellow accent
-  }}
->
+    <section
+      id="blog"
+      className="py-20 bg-white dark:bg-[radial-gradient(circle_at_center,_#000000_0%,_#111827_100%)] relative overflow-hidden transition-colors duration-300"
+      style={{
+        backgroundColor: "rgba(255, 255, 204, 0.2)"
+      }}
+    >
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -74,7 +107,7 @@ export const Blog: React.FC = () => {
             transition={{ duration: 0.6 }}
             className="text-4xl md:text-5xl font-bold text-black dark:text-white"
           >
-            Blogs
+            Gaming
           </motion.h2>
           <motion.div
             initial={{ width: 0 }}
@@ -84,7 +117,7 @@ export const Blog: React.FC = () => {
           />
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {blogPosts.map((post) => (
             <motion.article
               key={post.id}
@@ -94,62 +127,67 @@ export const Blog: React.FC = () => {
               transition={{ type: 'spring', stiffness: 100 }}
               className={cn(
                 "bg-white/90 dark:bg-gray-900/80 backdrop-blur-sm",
-                "rounded-xl overflow-hidden",
+                "aspect-square rounded-xl overflow-hidden",
                 "shadow-2xl hover:shadow-[0_20px_50px_-12px_rgba(79,70,229,0.3)]",
                 "transform transition-all duration-300",
                 "border border-white/20 dark:border-gray-700/50",
                 "group relative cursor-pointer"
               )}
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-blue -100/20 to-purple-100/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-100/20 to-purple-100/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               
-              <div className="overflow-hidden relative">
-                <motion.div
-                  className="h-48"
-                  initial={{ scale: 1 }}
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ type: 'spring', stiffness: 300, damping: 10 }}
-                >
-                  <motion.img
-                    src={post.image}
-                    alt={post.title}
-                    className="w-full h-full object-cover"
+              <div className="h-full w-full overflow-hidden relative">
+                {post.videoUrl ? (
+                  <motion.div
+                    className="h-full w-full bg-black"
                     initial={{ scale: 1 }}
-                    whileHover={{ 
-                      scale: 1.1,
-                      transition: {
-                        type: 'spring',
-                        stiffness: 100,
-                        damping: 10,
-                        mass: 0.5
-                      }
-                    }}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-                </motion.div>
+                    whileHover={{ scale: 1.05 }}
+                    transition={{ type: 'spring', stiffness: 300, damping: 10 }}
+                  >
+                    <iframe
+                      src={post.videoUrl}
+                      className="w-full h-full object-cover"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      title={post.title}
+                    />
+                  </motion.div>
+                ) : (
+                  <motion.div
+                    className="h-full"
+                    initial={{ scale: 1 }}
+                    whileHover={{ scale: 1.05 }}
+                    transition={{ type: 'spring', stiffness: 300, damping: 10 }}
+                  >
+                    <img
+                      src={post.image}
+                      alt={post.title}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+                  </motion.div>
+                )}
               </div>
               
-              <div className="p-6 relative z-10">
-                <h3 className="text-xl font-semibold bg-gradient-to-r from-blue-600 to-purple-500 bg-clip-text text-transparent dark:text-white mb-2">
+              <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/60 to-transparent z-10">
+                <h3 className="text-xl font-semibold text-white mb-2">
                   {post.title}
                 </h3>
-                <p className="text-gray-500 dark:text-gray-400 text-sm mb-4">
+                <p className="text-gray-300 text-sm mb-4">
                   {post.date} • {post.author}
-                </p>
-                <p className="text-gray-700 dark:text-gray-300 mb-4">
-                  {post.excerpt}
                 </p>
                 <motion.button
                   onClick={() => setSelectedPost(post)}
                   whileHover={{ x: 5 }}
                   className={cn(
-                    "text-blue-600 dark:text-purple-400 font-medium",
-                    "hover:text-blue-700 dark:hover:text-purple-300",
+                    "text-blue-400 font-medium",
+                    "hover:text-blue-300",
                     "transition-colors duration-300",
                     "group/link relative flex items-center gap-2"
                   )}
                 >
-                  <span className="relative z-10">Read More</span>
+                  <span className="relative z-10">View Content</span>
                   <motion.span
                     className="inline-block"
                     whileHover={{ rotate: 45 }}
@@ -191,6 +229,17 @@ export const Blog: React.FC = () => {
                   </motion.button>
                 </div>
                 <div className="p-6 prose dark:prose-invert max-w-none">
+                  {selectedPost.videoUrl && (
+                    <div className="aspect-video mb-8 rounded-xl overflow-hidden">
+                      <iframe
+                        src={selectedPost.videoUrl}
+                        className="w-full h-full"
+                        frameBorder="0"
+                        allowFullScreen
+                        title={selectedPost.title}
+                      />
+                    </div>
+                  )}
                   <ReactMarkdown className="text-gray-700 dark:text-gray-300">
                     {selectedPost.content}
                   </ReactMarkdown>

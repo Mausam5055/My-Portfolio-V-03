@@ -71,8 +71,8 @@ const boxes: ContentBox[] = [
   },
   {
     "id": 12,
-    "title": "Blog",
-    "description": "My thoughts and writings.",
+    "title": "Gaming",
+    "description": "Intense Action & Thrilling Moments! 🎮🔥",
     "image": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjM1ODQ3MzA1&ixlib=rb-1.2.1&q=80&w=400"
   },
   {

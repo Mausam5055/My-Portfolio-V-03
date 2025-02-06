@@ -2,14 +2,13 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
 import { cn } from '../lib/utils';
-import type { BlogPost } from '../types';
 import ReactMarkdown from 'react-markdown';
 
 type BlogPost = {
   id: string;
   title: string;
-  image?: string;
-  videoUrl?: string;
+  image: string;
+  videoUrl: string;
   excerpt: string;
   content: string;
   date: string;
@@ -20,7 +19,8 @@ const blogPosts: BlogPost[] = [
   {
     id: '1',
     title: 'Spider-Man: Miles Morales – Ultimate Web-Swinging Experience',
-    videoUrl: 'https://www.youtube.com/embed/26QPeXoWzLM  ',
+    image: 'https://images.unsplash.com/photo-1608889175123-8ee362201f81?auto=format&fit=crop&q=80&w=800',
+    videoUrl: 'https://www.youtube.com/embed/26QPeXoWzLM',
     excerpt: 'Watch my thrilling gameplay of Spider-Man: Miles Morales with epic web-swinging and combat!',
     content: `
     # Spider-Man: Miles Morales – Ultimate Web-Swinging Experience
@@ -34,50 +34,49 @@ const blogPosts: BlogPost[] = [
     - Stealth missions, side quests, and open-world exploration**  
     
     Watch as Miles takes on enemies, saves the city, and embraces his role as Spider-Man! 🕷️🔥
-    `
-    ,
+    `,
     date: '2024-03-20',
     author: 'Mausam Kar'
   },
   {
     id: '2',
-title: 'BGMI – Intense Battle Royale Action',
-videoUrl: 'https://www.youtube.com/embed/W5ueSz1I9cY  ',
-excerpt: 'Epic BGMI gameplay showcasing intense gunfights and survival tactics!',
-content: `
-# BGMI – Battlegrounds Mobile India Gameplay
+    title: 'BGMI – Intense Battle Royale Action',
+    image: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=800',
+    videoUrl: 'https://www.youtube.com/embed/W5ueSz1I9cY',
+    excerpt: 'Epic BGMI gameplay showcasing intense gunfights and survival tactics!',
+    content: `
+    # BGMI – Battlegrounds Mobile India Gameplay
 
-Watch my action-packed BGMI gameplay featuring:
+    Watch my action-packed BGMI gameplay featuring:
 
-- **High-intensity gunfights** and tactical strategies  
-- **Survival techniques** to secure the Chicken Dinner  
-- **Sniping, close combat, and team coordination**  
-- **Exciting moments in classic and TDM matches**  
+    - **High-intensity gunfights** and tactical strategies  
+    - **Survival techniques** to secure the Chicken Dinner  
+    - **Sniping, close combat, and team coordination**  
+    - **Exciting moments in classic and TDM matches**  
 
-Experience the thrill of BGMI as I take on enemies, explore maps, and push for victory! 🎯🔥
-`
-,
+    Experience the thrill of BGMI as I take on enemies, explore maps, and push for victory! 🎯🔥
+    `,
     date: '2024-03-18',
     author: 'Mausam Kar'
   },
   {
     id: '3',
-title: 'Asphalt 9: Legends – High-Speed Racing Action',
-videoUrl: 'https://www.youtube.com/embed/diznkP7_iEo ',
-excerpt: 'Experience the adrenaline rush of Asphalt 9: Legends with breathtaking races and stunning visuals!',
-content: `
-# Asphalt 9: Legends – Ultimate Racing Experience
+    title: 'Asphalt 9: Legends – High-Speed Racing Action',
+    image: 'https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&q=80&w=800',
+    videoUrl: 'https://www.youtube.com/embed/diznkP7_iEo',
+    excerpt: 'Experience the adrenaline rush of Asphalt 9: Legends with breathtaking races and stunning visuals!',
+    content: `
+    # Asphalt 9: Legends – Ultimate Racing Experience
 
-Get ready for high-speed action in my *Asphalt 9: Legends* gameplay! This video features:
+    Get ready for high-speed action in my *Asphalt 9: Legends* gameplay! This video features:
 
-- **Thrilling arcade-style racing** with stunning graphics  
-- **Nitro boosts, drifts, and jumps** for insane speed  
-- **Exotic supercars** and intense multiplayer showdowns  
-- **High-octane gameplay** across breathtaking locations  
+    - **Thrilling arcade-style racing** with stunning graphics  
+    - **Nitro boosts, drifts, and jumps** for insane speed  
+    - **Exotic supercars** and intense multiplayer showdowns  
+    - **High-octane gameplay** across breathtaking locations  
 
-Watch as I race through the most exciting tracks, pulling off epic drifts and securing first place! 🏎️🔥
-`
-,
+    Watch as I race through the most exciting tracks, pulling off epic drifts and securing first place! 🏎️🔥
+    `,
     date: '2024-03-15',
     author: 'Mausam Kar'
   }
@@ -137,37 +136,19 @@ export const Blog: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-blue-100/20 to-purple-100/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               
               <div className="h-full w-full overflow-hidden relative">
-                {post.videoUrl ? (
-                  <motion.div
-                    className="h-full w-full bg-black"
-                    initial={{ scale: 1 }}
-                    whileHover={{ scale: 1.05 }}
-                    transition={{ type: 'spring', stiffness: 300, damping: 10 }}
-                  >
-                    <iframe
-                      src={post.videoUrl}
-                      className="w-full h-full object-cover"
-                      frameBorder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                      title={post.title}
-                    />
-                  </motion.div>
-                ) : (
-                  <motion.div
-                    className="h-full"
-                    initial={{ scale: 1 }}
-                    whileHover={{ scale: 1.05 }}
-                    transition={{ type: 'spring', stiffness: 300, damping: 10 }}
-                  >
-                    <img
-                      src={post.image}
-                      alt={post.title}
-                      className="w-full h-full object-cover"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-                  </motion.div>
-                )}
+                <motion.div
+                  className="h-full"
+                  initial={{ scale: 1 }}
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ type: 'spring', stiffness: 300, damping: 10 }}
+                >
+                  <img
+                    src={post.image}
+                    alt={post.title}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+                </motion.div>
               </div>
               
               <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/60 to-transparent z-10">
@@ -229,17 +210,16 @@ export const Blog: React.FC = () => {
                   </motion.button>
                 </div>
                 <div className="p-6 prose dark:prose-invert max-w-none">
-                  {selectedPost.videoUrl && (
-                    <div className="aspect-video mb-8 rounded-xl overflow-hidden">
-                      <iframe
-                        src={selectedPost.videoUrl}
-                        className="w-full h-full"
-                        frameBorder="0"
-                        allowFullScreen
-                        title={selectedPost.title}
-                      />
-                    </div>
-                  )}
+                  <div className="aspect-video mb-8 rounded-xl overflow-hidden">
+                    <iframe
+                      src={selectedPost.videoUrl}
+                      className="w-full h-full"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      title={selectedPost.title}
+                    />
+                  </div>
                   <ReactMarkdown className="text-gray-700 dark:text-gray-300">
                     {selectedPost.content}
                   </ReactMarkdown>

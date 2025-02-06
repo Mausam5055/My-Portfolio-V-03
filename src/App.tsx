@@ -85,12 +85,13 @@ function App() {
           <div ref={sectionRefs.education}><Education /></div>
           <div ref={sectionRefs.gallery}><Gallery /></div>
           {/* <div ref={sectionRefs.artwork}><Artwork /></div> */}
-          <div ref={sectionRefs.inspirations}><Inspirations /></div>
+          <div ref={sectionRefs.blog}><Blog /></div>
           <div ref={sectionRefs.futureGoals}><FutureGoals /></div>
           <div ref={sectionRefs.funFacts}><FunFacts /></div>
-          <div ref={sectionRefs.blog}><Blog /></div>
+          <div ref={sectionRefs.inspirations}><Inspirations /></div>
+          
           <div ref={sectionRefs.projects}><Projects /></div>
-          <div ref={sectionRefs.testimonials}><Testimonials /></div> {/* Testimonials placed below Projects */}
+          <div ref={sectionRefs.testimonials}><Testimonials /></div>
           <div ref={sectionRefs.contact}><Contact /></div>
           <Footer />
         </div>

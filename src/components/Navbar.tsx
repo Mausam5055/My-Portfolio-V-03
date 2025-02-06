@@ -19,7 +19,6 @@ export default function Navbar({ isDark, toggleTheme, scrollToSection }: NavbarP
     'Gallery',
     'Artwork',
     'Journey',
-    'Blog',
     'Projects', // Added Projects
     'Testimonials', // Added Testimonials
     'Contact'

@@ -13,6 +13,18 @@ const subjects: Subject[] = [
     description: 'Explore the fundamental laws that govern our universe',
     chapters: [
       {
+        id: 'physics-0',
+        title: 'Vectors',
+        image: 'https://images.unsplash.com/photo-1527769929977-c341ee9f2033?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        description: 'Understanding Newton\'s laws and their applications',
+        driveLinks: [ 
+          'https://drive.google.com/file/d/19M8bKq4UNlVkWj2Nes24mB9ZDkv2es-c/view?usp=drive_link',
+          'https://drive.google.com/file/d/19aU1VGzH0oLM1b6UgVS59k7p6OogQGaw/view?usp=drive_link',
+          'https://drive.google.com/file/d/19fQKqQ85GSDW2RkLnpAfVg2NduwLOC4m/view?usp=drive_link'
+        ]
+      },
+    
+      {
         id: 'physics-1',
         title: 'Classical Mechanics',
         image: 'https://images.unsplash.com/photo-1591306208574-969f12f1ebfe?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',

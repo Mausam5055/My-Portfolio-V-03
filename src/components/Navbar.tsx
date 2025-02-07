@@ -17,7 +17,7 @@ export default function Navbar({ isDark, toggleTheme, scrollToSection }: NavbarP
     'About',
     'Skills',
     'Gallery',
-    'Artwork',
+    'Gaming',
     'Journey',
     'Projects', // Added Projects
     'Testimonials', // Added Testimonials

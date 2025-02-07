@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X } from 'lucide-react';
+import { X, ChevronDown, ChevronUp } from 'lucide-react';
 import { cn } from '../lib/utils';
 import ReactMarkdown from 'react-markdown';
 
-type BlogPost = {
+type GamingPost = {
   id: string;
   title: string;
   image: string;
@@ -15,7 +15,7 @@ type BlogPost = {
   author: string;
 };
 
-const blogPosts: BlogPost[] = [
+const gamingPosts: GamingPost[] = [
   {
     id: '1',
     title: 'Spider-Man: Miles Morales – Ultimate Web-Swinging Experience',
@@ -36,7 +36,7 @@ const blogPosts: BlogPost[] = [
     - High-energy combat with 
       electrifying Venom powers  
     - Breathtaking visuals and 
-      cinematicmoments  
+      cinematic moments  
     - Stealth missions, side 
       quests, and open-world 
       exploration  
@@ -62,10 +62,10 @@ const blogPosts: BlogPost[] = [
 
     - High-intensity gunfights and 
       tactical strategies  
-    - Survival techniques  to secure 
+    - Survival techniques to secure 
       the Chicken Dinner  
     - Sniping, close combat, and team 
-       coordination 
+      coordination 
     - Exciting moments in classic and 
       TDM matches
 
@@ -93,14 +93,14 @@ const blogPosts: BlogPost[] = [
     - Thrilling arcade-style racing 
       with stunning graphics  
     - Nitro boosts, drifts, and jumps 
-       for insane speed  
+      for insane speed  
     - Exotic supercars and intense 
-       multiplayer showdowns  
+      multiplayer showdowns  
     - High-octane gameplay across  
       breathtaking locations  
 
     Watch as I race through the most 
-    exciting tracks,  pulling off epic 
+    exciting tracks, pulling off epic 
     drifts and securing first place! 🏎️🔥
     `,
     date: '2024-03-15',
@@ -108,12 +108,15 @@ const blogPosts: BlogPost[] = [
   }
 ];
 
-export const Blog: React.FC = () => {
-  const [ selectedPost, setSelectedPost ] = useState<BlogPost | null>(null);
+export const Gaming: React.FC = () => {
+  const [selectedPost, setSelectedPost] = useState<GamingPost | null>(null);
+  const [showAll, setShowAll] = useState(false);
+  
+  const displayedPosts = showAll ? gamingPosts : gamingPosts.slice(0, 3);
 
   return (
     <section
-      id="blog"
+      id="gaming"
       className="py-20 bg-white dark:bg-[radial-gradient(circle_at_center,_#000000_0%,_#111827_100%)] relative overflow-hidden transition-colors duration-300"
       style={{
         backgroundColor: "rgba(255, 255, 204, 0.2)"
@@ -143,7 +146,7 @@ export const Blog: React.FC = () => {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {blogPosts.map((post) => (
+          {displayedPosts.map((post) => (
             <motion.article
               key={post.id}
               initial={{ opacity: 0, y: 20, rotateX: -10 }}
@@ -194,7 +197,7 @@ export const Blog: React.FC = () => {
                     "group/link relative flex items-center gap-2"
                   )}
                 >
-                  <span className="relative z-10">View Content</span>
+                  <span className="relative z-10">Watch Gameplay</span>
                   <motion.span
                     className="inline-block"
                     whileHover={{ rotate: 45 }}
@@ -209,95 +212,113 @@ export const Blog: React.FC = () => {
           ))}
         </div>
 
-        <AnimatePresence>
-        {selectedPost && (
+        {gamingPosts.length > 3 && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-start justify-center overflow-y-auto"
-            onClick={(e) => {
-              if (e.target === e.currentTarget) {
-                setSelectedPost(null);
-              }
-            }}
+            className="mt-8 text-center"
           >
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9, y: 20 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.9, y: 20 }}
-              className="bg-white/95 dark:bg-gray-900/95 backdrop-blur-lg rounded-xl w-full max-w-3xl mx-4 my-8 overflow-hidden border border-white/20 dark:border-gray-700/50 flex flex-col h-[90vh]"
+            <button
+              onClick={() => setShowAll(!showAll)}
+              className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-full font-medium hover:opacity-90 transition-opacity"
             >
-              {/* Sticky Header */}
-              <div className="sticky top-0 bg-white/95 dark:bg-gray-900/95 p-4 border-b dark:border-gray-700 flex justify-between items-center backdrop-blur-sm z-10">
-                <h3 className="text-lg sm:text-xl font-semibold bg-gradient-to-r from-blue-600 to-purple-500 bg-clip-text text-transparent dark:text-white line-clamp-1 pr-4">
-                  {selectedPost.title}
-                </h3>
-                <motion.button
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    setSelectedPost(null);
-                  }}
-                  whileHover={{ rotate: 90 }}
-                  className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 flex-shrink-0"
-                >
-                  <X size={24} />
-                </motion.button>
-              </div>
-
-             
-          {/* Modified scroll container */}
-<div className="flex-1 overflow-y-auto overflow-x-hidden p-4 sm:p-6 space-y-6 max-h-screen">
-  <div className="aspect-video mb-6 sm:mb-8 rounded-xl overflow-hidden bg-gray-100 dark:bg-gray-800">
-    <iframe
-      src={selectedPost.videoUrl}
-      className="w-full h-full"
-      frameBorder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowFullScreen
-      title={selectedPost.title}
-    />
-  </div>
-
-  {/* Updated content container */}
-  <div className="prose dark:prose-invert max-w-none w-full text-gray-900 dark:text-white px-2 sm:px-0">
-    <ReactMarkdown
-      components={{
-        h1: ({ children }) => (
-          <h1 className="text-2xl sm:text-3xl font-bold mb-6 text-gray-900 dark:text-white">
-            {children}
-          </h1>
-        ),
-        p: ({ children }) => (
-          <p className="mb-4 text-base leading-relaxed text-gray-700 dark:text-gray-300 break-words">
-            {children}
-          </p>
-        ),
-        ul: ({ children }) => (
-          <ul className="space-y-3 my-6 pl-5 list-outside">
-            {children}
-          </ul>
-        ),
-        li: ({ children }) => (
-          <li className="relative pl-6 mb-2 text-gray-700 dark:text-gray-300 break-words">
-            <span className="absolute left-0 text-blue-500">•</span>
-            <span className="text-base leading-relaxed">
-              {children}
-            </span>
-          </li>
-        ),
-      }}
-    >
-      {selectedPost.content}
-    </ReactMarkdown>
-  </div>
-</div>
-            </motion.div>
+              {showAll ? (
+                <>
+                  Show Less <ChevronUp className="w-5 h-5" />
+                </>
+              ) : (
+                <>
+                  Show More <ChevronDown className="w-5 h-5" />
+                </>
+              )}
+            </button>
           </motion.div>
         )}
-      </AnimatePresence>
 
-        {/* Animated background elements */}
+        <AnimatePresence>
+          {selectedPost && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-start justify-center overflow-y-auto"
+              onClick={(e) => {
+                if (e.target === e.currentTarget) {
+                  setSelectedPost(null);
+                }
+              }}
+            >
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.9, y: 20 }}
+                className="bg-white/95 dark:bg-gray-900/95 backdrop-blur-lg rounded-xl w-full max-w-3xl mx-4 my-8 overflow-hidden border border-white/20 dark:border-gray-700/50 flex flex-col h-[90vh]"
+              >
+                <div className="sticky top-0 bg-white/95 dark:bg-gray-900/95 p-4 border-b dark:border-gray-700 flex justify-between items-center backdrop-blur-sm z-10">
+                  <h3 className="text-lg sm:text-xl font-semibold bg-gradient-to-r from-blue-600 to-purple-500 bg-clip-text text-transparent dark:text-white line-clamp-1 pr-4">
+                    {selectedPost.title}
+                  </h3>
+                  <motion.button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setSelectedPost(null);
+                    }}
+                    whileHover={{ rotate: 90 }}
+                    className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 flex-shrink-0"
+                  >
+                    <X size={24} />
+                  </motion.button>
+                </div>
+
+                <div className="flex-1 overflow-y-auto overflow-x-hidden p-4 sm:p-6 space-y-6 max-h-screen">
+                  <div className="aspect-video mb-6 sm:mb-8 rounded-xl overflow-hidden bg-gray-100 dark:bg-gray-800">
+                    <iframe
+                      src={selectedPost.videoUrl}
+                      className="w-full h-full"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      title={selectedPost.title}
+                    />
+                  </div>
+
+                  <div className="prose dark:prose-invert max-w-none w-full text-gray-900 dark:text-white px-2 sm:px-0">
+                    <ReactMarkdown
+                      components={{
+                        h1: ({ children }) => (
+                          <h1 className="text-2xl sm:text-3xl font-bold mb-6 text-gray-900 dark:text-white">
+                            {children}
+                          </h1>
+                        ),
+                        p: ({ children }) => (
+                          <p className="mb-4 text-base leading-relaxed text-gray-700 dark:text-gray-300 break-words">
+                            {children}
+                          </p>
+                        ),
+                        ul: ({ children }) => (
+                          <ul className="space-y-3 my-6 pl-5 list-outside">
+                            {children}
+                          </ul>
+                        ),
+                        li: ({ children }) => (
+                          <li className="relative pl-6 mb-2 text-gray-700 dark:text-gray-300 break-words">
+                            <span className="absolute left-0 text-blue-500">•</span>
+                            <span className="text-base leading-relaxed">
+                              {children}
+                            </span>
+                          </li>
+                        ),
+                      }}
+                    >
+                      {selectedPost.content}
+                    </ReactMarkdown>
+                  </div>
+                </div>
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
         <div className="absolute -top-20 left-1/3 w-96 h-96 bg-purple-400/10 rounded-full blur-3xl animate-pulse-slow pointer-events-none" />
         <div className="absolute -bottom-20 right-1/3 w-96 h-96 bg-blue-400/10 rounded-full blur-3xl animate-pulse-slow delay-1000 pointer-events-none" />
       </div>
@@ -315,4 +336,4 @@ export const Blog: React.FC = () => {
   );
 };
 
-export default Blog;
+export default Gaming;

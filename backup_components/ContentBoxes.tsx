@@ -7,7 +7,7 @@ const boxes: ContentBox[] = [
     "id": 1,
     "title": "About",
     "description": "Learn more about me and my background.",
-    "image": "/assets/about2.webp"
+    "image": "/assets/about3.jpg"
   },
   {
     "id": 2,
@@ -29,8 +29,8 @@ const boxes: ContentBox[] = [
   },
   {
     "id": 5,
-    "title": "Education",
-    "description": "My educational background.",
+    "title": "Academic resources",
+    "description": "Curated study materials  for learning, critical thinking, and skill development.",
     "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjM1ODQ2ODk1&ixlib=rb-1.2.1&q=80&w=400"
   },
   {
@@ -41,9 +41,9 @@ const boxes: ContentBox[] = [
   },
   {
     "id": 7,
-    "title": "Artwork",
-    "description": "My artistic creations.",
-    "image": "https://images.unsplash.com/photo-1536924940846-227afb31e2a5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjM1ODQ3MDA1&ixlib=rb-1.2.1&q=80&w=400"
+    "title": "Cubing Skills",
+    "description": "Passionate about solving Rubik’s Cubes with speed and precision, mastering algorithms, and improving solve times.",
+    "image": "https://images.unsplash.com/photo-1567646303972-f7de3a9c0a05?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHJ1YmlrJTIwY3ViZXxlbnwwfHwwfHx8MA%3D%3D"
   },
   {
     "id": 8,
@@ -71,8 +71,8 @@ const boxes: ContentBox[] = [
   },
   {
     "id": 12,
-    "title": "Blog",
-    "description": "My thoughts and writings.",
+    "title": "Gaming",
+    "description": "Intense Action & Thrilling Moments! 🎮🔥",
     "image": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjM1ODQ3MzA1&ixlib=rb-1.2.1&q=80&w=400"
   },
   {
@@ -89,15 +89,12 @@ const boxes: ContentBox[] = [
   }
 ];
 
-
-
 export default function ContentBoxes({ refs }: { refs: any }) {
   const [hoveredBox, setHoveredBox] = useState<number | null>(null);
   const [isMouseOver, setIsMouseOver] = useState(false);
   const containerRef = useRef<HTMLDivElement | null>(null);
   const isTouchDevice = 'ontouchstart' in window;
 
-  // Handle click to scroll to sections
   const handleBoxClick = (id: number) => {
     const sectionKeys = Object.keys(refs);
     if (sectionKeys[id - 1] && refs[sectionKeys[id - 1]].current) {
@@ -105,21 +102,20 @@ export default function ContentBoxes({ refs }: { refs: any }) {
     }
   };
 
-  // Auto scrolling logic with safety checks
   useEffect(() => {
     const container = containerRef.current;
-    if (!container) return; // Ensure container exists
+    if (!container) return;
 
-    let startX: number = 0; // Track the starting X position for touch
-    let isSwiping: boolean = false; // Track if a swipe is in progress
+    let startX: number = 0;
+    let isSwiping: boolean = false;
 
     const handleMouseMove = (event: MouseEvent) => {
-      if (!isMouseOver || !container) return; // Only scroll if mouse is over the boxes
+      if (!isMouseOver || !container) return;
       const { clientX } = event;
       const { left, right, width } = container.getBoundingClientRect();
 
-      const scrollSpeed = 15; // Increased speed for smoother scrolling
-      const scrollThreshold = width * 0.15; // Reduced threshold to 15% of width
+      const scrollSpeed = 15;
+      const scrollThreshold = width * 0.15;
 
       if (clientX < left + scrollThreshold) {
         container.scrollBy({ left: -scrollSpeed, behavior: 'smooth' });
@@ -129,24 +125,23 @@ export default function ContentBoxes({ refs }: { refs: any }) {
     };
 
     const handleTouchStart = (event: TouchEvent) => {
-      if (!container) return; // Safety check
-      startX = event.touches[0].clientX; // Get the initial touch position
-      isSwiping = true; // Set swiping to true
+      if (!container) return;
+      startX = event.touches[0].clientX;
+      isSwiping = true;
     };
 
     const handleTouchMove = (event: TouchEvent) => {
-      if (!isMouseOver || !container || !isSwiping) return; // Only scroll if mouse is over the boxes and swiping
-      event.preventDefault(); // Prevent default scrolling behavior
+      if (!isMouseOver || !container || !isSwiping) return;
+      event.preventDefault();
       const touch = event.touches[0];
-      const deltaX = touch.clientX - startX; // Calculate the distance moved
+      const deltaX = touch.clientX - startX;
 
-      // Scroll the container based on the swipe distance
       container.scrollBy({ left: -deltaX, behavior: 'smooth' });
-      startX = touch.clientX; // Update the start position for the next move
+      startX = touch.clientX;
     };
 
     const handleTouchEnd = () => {
-      isSwiping = false; // Reset swiping state
+      isSwiping = false;
     };
 
     document.addEventListener("mousemove", handleMouseMove);
@@ -167,41 +162,132 @@ export default function ContentBoxes({ refs }: { refs: any }) {
   }, [containerRef, isMouseOver]);
 
   return (
-    <div 
-      ref={containerRef} 
-      className="w-full py-10 overflow-x-auto bg-white dark:bg-gray-800 scrollbar-hide scroll-snap-x scroll-snap-mandatory"
-      onMouseEnter={() => setIsMouseOver(true)}
-      onMouseLeave={() => setIsMouseOver(false)}
+    <section 
+      id="content-boxes"
+      className="py-20 bg-white dark:bg-[radial-gradient(circle_at_center,_#000000_0%,_#111827_100%)] relative overflow-hidden transition-colors duration-300"
+      style={{
+        backgroundColor: "rgba(255, 255, 204, 0.05)"
+      }}
     >
-      <div className="flex gap-4 md:gap-6 pl-4 pr-4 md:pl-0 md:pr-0">
-        <motion.div
-          animate={{ x: [0, -10, 0] }}
-          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-          className="flex gap-4 md:gap-6"
+      {/* Section Title */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        className="mb-16 text-center space-y-4"
+      >
+        <motion.h2
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6 }}
+          className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white"
         >
-          {boxes.map((box) => (
-            <motion.div
-              key={box.id}
-              whileHover={{ scale: isTouchDevice ? 1 : 1.05, y: isTouchDevice ? 0 : -5 }}
-              onHoverStart={() => !isTouchDevice && setHoveredBox(box.id)}
-              onHoverEnd={() => !isTouchDevice && setHoveredBox(null)}
-              onClick={() => handleBoxClick(box.id)}
-              className="flex-shrink-0 w-48 h-32 md:w-72 md:h-48 rounded-lg overflow-hidden relative group cursor-pointer scroll-snap-align-start"
-            >
-              <img 
-                src={box.image} 
-                alt={box.title} 
-                className="w-full h-full object-cover"
-                loading="lazy"
-              />
-              <div className="absolute bottom-0 left-0 right-0 p-2 text-white text-xs md:text-sm bg-black bg-opacity-50">
-                <h3 className="font-bold">{box.title}</h3>
-                <p className="opacity-100">{box.description}</p>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
+          Explore My World
+        </motion.h2>
+        <motion.div
+          initial={{ width: 0 }}
+          whileInView={{ width: "180px" }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="h-1 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 mx-auto rounded-full"
+        />
+      </motion.div>
+
+      {/* Floating Elements */}
+      <div className="absolute inset-0 pointer-events-none">
+        {[...Array(6)].map((_, i) => (
+          <motion.div
+            key={i}
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{
+              opacity: [0, 0.3, 0],
+              scale: [0, 1, 0],
+              x: Math.random() * 200 - 100,
+              y: Math.random() * 200 - 100
+            }}
+            transition={{
+              duration: 4 + Math.random() * 4,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+            className="absolute w-48 h-48 bg-gradient-to-br from-blue-400/10 to-purple-500/10 rounded-full blur-xl"
+            style={{
+              top: `${Math.random() * 100}%`,
+              left: `${Math.random() * 100}%`
+            }}
+          />
+        ))}
       </div>
-    </div>
+
+      {/* Content Boxes Container */}
+      <div 
+        ref={containerRef} 
+        className="w-full overflow-x-auto scrollbar-hide scroll-snap-x scroll-snap-mandatory relative z-10"
+        onMouseEnter={() => setIsMouseOver(true)}
+        onMouseLeave={() => setIsMouseOver(false)}
+      >
+        <div className="flex gap-4 md:gap-6 px-4 md:px-8">
+          <motion.div
+            animate={{ x: [0, -10, 0] }}
+            transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+            className="flex gap-4 md:gap-6"
+          >
+            {boxes.map((box) => (
+              <motion.div
+                key={box.id}
+                whileHover={{ 
+                  scale: isTouchDevice ? 1 : 1.05, 
+                  y: isTouchDevice ? 0 : -5,
+                  transition: { duration: 0.3 }
+                }}
+                onHoverStart={() => !isTouchDevice && setHoveredBox(box.id)}
+                onHoverEnd={() => !isTouchDevice && setHoveredBox(null)}
+                onClick={() => handleBoxClick(box.id)}
+                className="flex-shrink-0 w-48 h-32 md:w-72 md:h-48 rounded-xl overflow-hidden relative group cursor-pointer scroll-snap-align-start transform transition-all duration-300"
+              >
+                {/* Background Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300" />
+                
+                {/* Image */}
+                <img 
+                  src={box.image} 
+                  alt={box.title} 
+                  className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
+                  loading="lazy"
+                />
+                
+                {/* Content Overlay */}
+                <div className="absolute inset-0 flex flex-col justify-end p-4 bg-gradient-to-t from-black/80 via-black/50 to-transparent">
+                  <div className="transform transition-all duration-300">
+                    <h3 className="font-bold text-white text-lg md:text-xl mb-2">
+                      {box.title}
+                    </h3>
+                    <p className="text-white/90 text-sm md:text-base line-clamp-2 md:line-clamp-none">
+                      {box.description}
+                    </p>
+                  </div>
+                </div>
+
+                {/* Shine Effect */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-30 transition-opacity duration-500">
+                  <div className="absolute -inset-[400%] animate-[shine_3s_ease-in-out_infinite] bg-gradient-to-r from-transparent via-white/20 to-transparent" />
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Shine Animation */}
+      <style jsx global>{`
+        @keyframes shine {
+          from {
+            transform: translateX(-100%) rotate(45deg);
+          }
+          to {
+            transform: translateX(100%) rotate(45deg);
+          }
+        }
+      `}</style>
+    </section>
   );
 }

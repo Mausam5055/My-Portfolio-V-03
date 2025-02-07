@@ -4,88 +4,94 @@ import type { ContentBox } from '../types';
 
 const boxes: ContentBox[] = [
   {
-    "id": 1,
-    "title": "About",
-    "description": "Learn more about me and my background.",
-    "image": "/assets/about2.webp"
+    id: 1,
+    title: "About",
+    description: "Learn more about me and my background.",
+    image: "/assets/about3.jpg"
   },
   {
-    "id": 2,
-    "title": "Qualifications",
-    "description": "My academic and professional qualifications.",
-    "image": "https://plus.unsplash.com/premium_photo-1682125773446-259ce64f9dd7?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    id: 2,
+    title: "Journey",
+    description: "My professional journey and experiences.",
+    image: "https://images.unsplash.com/photo-1508169351866-777fc0047ac5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjM1ODQ3MDY1&ixlib=rb-1.2.1&q=80&w=400"
   },
   {
-    "id": 3,
-    "title": "Certifications",
-    "description": "Certifications I have earned.",
-    "image": "https://media.istockphoto.com/id/2164485793/photo/cropped-hands-of-businessman-holding-certificate.jpg?s=2048x2048&w=is&k=20&c=Vr0RidPPf0nca75MlWjSUgyd26-eDENomwsxIeIEDCk="
+    id: 3,
+    title: "Qualifications",
+    description: "My academic and professional qualifications.",
+    image: "https://plus.unsplash.com/premium_photo-1682125773446-259ce64f9dd7?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
-    "id": 4,
-    "title": "Skills",
-    "description": "Skills I possess in various technologies.",
-    "image": "https://images.unsplash.com/photo-1516116216624-53e697fedbea?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjM1ODQ2ODQ1&ixlib=rb-1.2.1&q=80&w=400"
+    id: 4,
+    title: "Certifications",
+    description: "Certifications I have earned through dedicated learning.",
+    image: "https://media.istockphoto.com/id/2164485793/photo/cropped-hands-of-businessman-holding-certificate.jpg?s=2048x2048&w=is&k=20&c=Vr0RidPPf0nca75MlWjSUgyd26-eDENomwsxIeIEDCk="
   },
   {
-    "id": 5,
-    "title": "Education",
-    "description": "My educational background.",
-    "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjM1ODQ2ODk1&ixlib=rb-1.2.1&q=80&w=400"
+    id: 5,
+    title: "Skills",
+    description: "Technical and professional skills I've mastered.",
+    image: "https://images.unsplash.com/photo-1516116216624-53e697fedbea?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjM1ODQ2ODQ1&ixlib=rb-1.2.1&q=80&w=400"
   },
   {
-    "id": 6,
-    "title": "Gallery",
-    "description": "A showcase of my work.",
-    "image": "https://images.unsplash.com/photo-1497215728101-856f4ea42174?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjM1ODQ2OTQ1&ixlib=rb-1.2.1&q=80&w=400"
+    id: 6,
+    title: "Academic Resources",
+    description: "Academic background and educational journey.",
+    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjM1ODQ2ODk1&ixlib=rb-1.2.1&q=80&w=400"
   },
   {
-    "id": 7,
-    "title": "Artwork",
-    "description": "My artistic creations.",
-    "image": "https://images.unsplash.com/photo-1536924940846-227afb31e2a5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjM1ODQ3MDA1&ixlib=rb-1.2.1&q=80&w=400"
+    id: 7,
+    title: "Gallery",
+    description: "Visual showcase of my projects and achievements.",
+    image: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjM1ODQ2OTQ1&ixlib=rb-1.2.1&q=80&w=400"
   },
   {
-    "id": 8,
-    "title": "Journey",
-    "description": "My professional journey.",
-    "image": "https://images.unsplash.com/photo-1508169351866-777fc0047ac5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjM1ODQ3MDY1&ixlib=rb-1.2.1&q=80&w=400"
+    id: 8,
+    title: "Cubing Skills",
+    description: "Speedcubing achievements and competition history.",
+    image: "https://images.unsplash.com/photo-1567646303972-f7de3a9c0a05?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHJ1YmlrJTIwY3ViZXxlbnwwfHwwfHx8MA%3D%3D"
   },
   {
-    "id": 9,
-    "title": "Inspirations",
-    "description": "What inspires me.",
-    "image": "https://images.unsplash.com/photo-1455849318743-b2233052fcff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjM1ODQ3MTI1&ixlib=rb-1.2.1&q=80&w=400"
+    id: 9,
+    title: "Projects",
+    description: "Notable technical projects and implementations.",
+    image: "https://images.unsplash.com/photo-1455849318743-b2233052fcff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjM1ODQ3MTI1&ixlib=rb-1.2.1&q=80&w=400"
   },
   {
-    "id": 10,
-    "title": "Future Goals",
-    "description": "My aspirations for the future.",
-    "image": "https://images.unsplash.com/photo-1506784365847-bbad939e9335?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjM1ODQ3MTg1&ixlib=rb-1.2.1&q=80&w=400"
+    id: 10,
+    title: "Gaming",
+    description: "Gameplay highlights and gaming achievements.",
+    image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjM1ODQ3MzA1&ixlib=rb-1.2.1&q=80&w=400"
   },
   {
-    "id": 11,
-    "title": "Fun Facts",
-    "description": "Interesting facts about me.",
-    "image": "https://images.unsplash.com/photo-1489367874814-f5d040621dd8?q=80&w=2046&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    id: 11,
+    title: "Fun Facts",
+    description: "Interesting personal trivia and quirks.",
+    image: "https://images.unsplash.com/photo-1489367874814-f5d040621dd8?q=80&w=2046&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
-    "id": 12,
-    "title": "Gaming",
-    "description": "Intense Action & Thrilling Moments! 🎮🔥",
-    "image": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjM1ODQ3MzA1&ixlib=rb-1.2.1&q=80&w=400"
+    id: 12,
+    title: "Inspirations",
+    description: "People and ideas that drive my creativity.",
+    image: "https://images.unsplash.com/photo-1455849318743-b2233052fcff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjM1ODQ3MTI1&ixlib=rb-1.2.1&q=80&w=400"
   },
   {
-    "id": 13,
-    "title": "Testimonials",
-    "description": "What others say about me.",
-    "image": "https://plus.unsplash.com/premium_photo-1682310144714-cb77b1e6d64a?q=80&w=1824&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    id: 13,
+    title: "Future Goals",
+    description: "Aspirations and roadmap for coming years.",
+    image: "https://images.unsplash.com/photo-1506784365847-bbad939e9335?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjM1ODQ3MTg1&ixlib=rb-1.2.1&q=80&w=400"
   },
   {
-    "id": 14,
-    "title": "Contact",
-    "description": "Get in touch with me.",
-    "image": "https://images.unsplash.com/photo-1528747045269-390fe33c19f2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjM1ODQ3NDI1&ixlib=rb-1.2.1&q=80&w=400"
+    id: 14,
+    title: "Testimonials",
+    description: "Endorsements from colleagues and clients.",
+    image: "https://plus.unsplash.com/premium_photo-1682310144714-cb77b1e6d64a?q=80&w=1824&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    id: 15,
+    title: "Contact",
+    description: "Let's connect and collaborate!",
+    image: "https://images.unsplash.com/photo-1528747045269-390fe33c19f2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjM1ODQ3NDI1&ixlib=rb-1.2.1&q=80&w=400"
   }
 ];
 

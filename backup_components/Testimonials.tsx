@@ -121,9 +121,12 @@ export const Testimonials: React.FC = () => {
 
   return (
     <section 
-    id="contact" 
-    className="py-20 bg-[#fffbe6] dark:bg-gray-900" // Light mode: soft yellow, Dark mode: gray-900
-  >
+      id="testimonials" 
+      className="py-20 bg-white dark:bg-[radial-gradient(circle_at_center,_#000000_0%,_#111827_100%)] relative overflow-hidden transition-colors duration-300"
+      style={{
+        backgroundColor: "rgba(255, 255, 204, 0.05)" // Light yellow accent in light theme
+      }}
+    >
       <div className="container mx-auto">
         <motion.div
                   initial={{ opacity: 0, y: 20 }}
@@ -165,7 +168,7 @@ export const Testimonials: React.FC = () => {
                     animate={{ opacity: 1, y: 0 }}
                     whileHover={{ scale: 1.05, boxShadow: "0px 10px 20px rgba(0,0,0,0.15)" }}
                     transition={{ duration: 0.3 }}
-                    className="bg-blue-50/50 dark:bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-xl transform transition-all duration-300 relative"
+                    className="bg-blue-50/50 dark:bg-gray-900 rounded-lg p-6 shadow-lg hover:shadow-xl transform transition-all duration-300 relative"
                   >
                     <Quote size={40} className="text-blue-300 dark:text-blue-700 absolute top-4 right-4 opacity-20" />
                     <div className="flex items-center space-x-4 mb-6">

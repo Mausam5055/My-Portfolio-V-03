@@ -5,27 +5,42 @@ import { Menu, X, Sun, Moon, User } from 'lucide-react';
 interface NavbarProps {
   isDark: boolean;
   toggleTheme: () => void;
-  scrollToSection: (section: string) => void; // Add this line
+  scrollToSection: (section: string) => void;
 }
 
 export default function Navbar({ isDark, toggleTheme, scrollToSection }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
 
-  // Ensure all sections are included
+  // Updated to match sectionRefs keys from App.tsx
   const navItems = [
-    'Home',
-    'About',
-    'Skills',
-    'Gallery',
-    'Gaming',
-    'Journey',
-    'Projects', // Added Projects
-    'Testimonials', // Added Testimonials
-    'Contact'
+    'about',
+    'journey',
+    'skills',
+    'gallery',
+    'cubing',
+    'projects',
+    'gaming',
+    'testimonials',
+    'contact'
   ];
 
+  const getDisplayName = (section: string) => {
+    const names: { [key: string]: string } = {
+      about: 'About',
+      journey: 'Journey',
+      skills: 'Skills',
+      gallery: 'Gallery',
+      cubing: 'Cubing',
+      projects: 'Projects',
+      gaming: 'Gaming',
+      testimonials: 'Testimonials',
+      contact: 'Contact'
+    };
+    return names[section] || section;
+  };
+
   const handleLinkClick = (section: string) => {
-    scrollToSection(section.toLowerCase()); // Ensure the section name is in lowercase
+    scrollToSection(section);
     setIsOpen(false);
   };
 
@@ -34,23 +49,23 @@ export default function Navbar({ isDark, toggleTheme, scrollToSection }: NavbarP
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0 flex items-center space-x-2">
-            <User  className="w-6 h-6" />
+            <User className="w-6 h-6" />
             <h1 className="text-xl font-bold" style={{ fontFamily: "'Dancing Script', cursive" }}>Mausam Kar</h1>
           </div>
 
-          {/* Navigation Items */}
+          {/* Desktop Navigation */}
           <div className="flex items-center space-x-6">
             <div className="hidden md:flex items-center space-x-6">
               {navItems.map((item) => (
-                <motion.a
+                <motion.button
                   key={item}
                   onClick={() => handleLinkClick(item)}
-                  className="hover:text-blue-500 transition-colors duration-200"
+                  className="hover:text-blue-500 transition-colors duration-200 capitalize"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  {item}
-                </motion.a>
+                  {getDisplayName(item)}
+                </motion.button>
               ))}
             </div>
 
@@ -64,7 +79,7 @@ export default function Navbar({ isDark, toggleTheme, scrollToSection }: NavbarP
               {isDark ? <Sun size={20} /> : <Moon size={20} />}
             </motion.button>
 
-            {/* Mobile Navigation Button */}
+            {/* Mobile Menu Button */}
             <div className="md:hidden flex items-center space-x-2">
               <motion.button
                 onClick={() => setIsOpen(!isOpen)}
@@ -88,19 +103,19 @@ export default function Navbar({ isDark, toggleTheme, scrollToSection }: NavbarP
       >
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
           {navItems.map((item) => (
-            <motion.a
+            <motion.button
               key={item}
               onClick={() => handleLinkClick(item)}
-              className="block px-3 py-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors duration-200"
+              className="block w-full text-left px-3 py-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors duration-200 capitalize"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              {item}
-            </motion.a>
+              {getDisplayName(item)}
+            </motion.button>
           ))}
           <motion.button
             onClick={toggleTheme}
-            className="w-full text-left px-3 py-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors duration-200"
+            className="block w-full text-left px-3 py-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors duration-200"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             aria-label="Toggle theme"

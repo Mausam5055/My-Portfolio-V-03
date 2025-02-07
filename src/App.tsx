@@ -67,7 +67,22 @@ function App() {
       block: 'start'
     });
   };
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Mausam Kar",
+    "jobTitle": "Web Developer & Designer",
+    "url": "https://my-portfolio-v-03.vercel.app/",
+    "sameAs": [
+      "https://linkedin.com/in/yourprofile",
+      "https://github.com/yourprofile"
+    ],
+    "description": "Professional web developer and designer specializing in modern web solutions",
+    "image": "https://my-portfolio-v-03.vercel.app/preview.jpg"
+  };
+  
 
+  
   return (
     <Router>
       {showIntro ? (

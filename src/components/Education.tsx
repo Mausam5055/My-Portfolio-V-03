@@ -26,13 +26,13 @@ const subjects: Subject[] = [
     
       {
         id: 'physics-1',
-        title: 'Classical Mechanics',
+        title: 'Circular Motion and  Collison',
         image: 'https://images.unsplash.com/photo-1591306208574-969f12f1ebfe?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         description: 'Understanding Newton\'s laws and their applications',
         driveLinks: [ // Changed to array
-          'https://drive.google.com/part1',
-          'https://drive.google.com/part2',
-          'https://drive.google.com/part3'
+          'https://drive.google.com/file/d/1Y1nfKKtiw6-4GoWsmJo9ZwjSwfN-oABA/view?usp=drive_link',
+          'https://drive.google.com/file/d/1R4udKtwqPON7vPcdpsU7ZMpgMNv_HH_c/view?usp=drive_link',
+          'https://drive.google.com/file/d/1PQMzixnDiOPsdsJQWbpfn9P4d6m5ESQC/view?usp=drive_link'
         ]
       },
       {
@@ -41,7 +41,7 @@ const subjects: Subject[] = [
         image: 'https://images.unsplash.com/photo-1528227317825-6472d30f8b72?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         description: 'Heat, energy, and their transformations',
         driveLinks: [ // Changed to array
-          'https://drive.google.com/part1',
+          'https://drive.google.com/file/d/1azCNr0JgU9CKiqqC_vQ3JSWx3I0oYIkL/view?usp=drive_link',
           'https://drive.google.com/part2',
           'https://drive.google.com/part3'
         ]
@@ -52,20 +52,34 @@ const subjects: Subject[] = [
         image: 'https://plus.unsplash.com/premium_photo-1683141381544-390e29f842fb?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         description: 'Introduction to the basics of physics and measurement systems',
         driveLinks: [ // Changed to array
-          'https://drive.google.com/part1',
-          'https://drive.google.com/part2',
-          'https://drive.google.com/part3'
+          'https://drive.google.com/file/d/185IFTvMDb1_Ze47Xt_eT32xXTk9mDtSq/view?usp=drive_link',
+          'https://drive.google.com/file/d/18VJyQi3jV_YwjQqwQ5GXjOYMPfkvRpGV/view?usp=drive_link',
+          'https://drive.google.com/file/d/18Kiy3ZqS0j_-rtUgTIdimR6mahsSuxOh/view?usp=drive_link'
         ]
       },
       {
         id: 'physics-4',
-        title: 'Kinematics',
+        title: 'Kinematics In 1-D',
         image: 'https://images.unsplash.com/photo-1633493702341-4d04841df53b?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         description: 'Study of motion without considering forces',
         driveLinks: [ // Changed to array
-          'https://drive.google.com/part1',
-          'https://drive.google.com/part2',
-          'https://drive.google.com/part3'
+          'https://drive.google.com/file/d/1EmMFfgju7vMApg2qNKrK7m1LZ5vMIb40/view?usp=drive_link',
+          'https://drive.google.com/file/d/1ErbNe3tif30kWesw5Zsb-uLCDyNTWb7l/view?usp=drive_link',
+          'https://drive.google.com/file/d/1Ew7OFwQOGNd2ebS9wSgi5L7tublNhbIW/view?usp=drive_link',
+          'https://drive.google.com/file/d/1FO2JM3rZjShc2N4jDUSTGRveUPMvB68X/view?usp=drive_link',
+     
+        ]
+      },
+      {
+        id: 'physics-4',
+        title: 'Kinematics In 2-D',
+        image: 'https://images.unsplash.com/photo-1633493702341-4d04841df53b?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        description: 'Study of motion without considering forces',
+        driveLinks: [ // Changed to array
+          'https://drive.google.com/file/d/1FFRcQZXQ0CwIuiROeEIv2e8-c9DtPVU5/view?usp=drive_link',
+          'https://drive.google.com/file/d/1GGbMJzzgrFtcQjKwpCFPcT3yl3vBG6Iv/view?usp=drive_link',
+          'https://drive.google.com/file/d/1Pt1gcWBkP-Zw6bQAht7n100NHkGOGSMg/view?usp=drive_link',
+          'https://drive.google.com/file/d/1F8aM-7wDxRQXCzmM5u9W0YnBf6PRula-/view?usp=drive_link',
         ]
       },
       {
@@ -74,9 +88,9 @@ const subjects: Subject[] = [
         image: 'https://images.unsplash.com/photo-1499871435582-a1d4ff236842?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         description: 'Understanding the laws governing objects in motion',
         driveLinks: [ // Changed to array
-          'https://drive.google.com/part1',
-          'https://drive.google.com/part2',
-          'https://drive.google.com/part3'
+         'https://drive.google.com/file/d/1O2xvmrScJiBACfEioSz4UiUiKXgb_2wV/view?usp=drive_link',
+          'https://drive.google.com/file/d/1PakpqLWQFM0S15JS6b_9FYUYX-9gbxAA/view?usp=drive_link',
+          'https://drive.google.com/file/d/1PQMzixnDiOPsdsJQWbpfn9P4d6m5ESQC/view?usp=drive_link'
         ]
       },
       {

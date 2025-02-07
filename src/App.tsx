@@ -37,11 +37,11 @@ function App() {
     education: useRef<HTMLDivElement>(null),
     gallery: useRef<HTMLDivElement>(null),
     cubing: useRef<HTMLDivElement>(null),
+    projects: useRef<HTMLDivElement>(null),
+    gaming: useRef<HTMLDivElement>(null),  // Changed to lowercase
     inspirations: useRef<HTMLDivElement>(null),
     futureGoals: useRef<HTMLDivElement>(null),
     funFacts: useRef<HTMLDivElement>(null),
-    Gaming: useRef<HTMLDivElement>(null),
-    projects: useRef<HTMLDivElement>(null),
     testimonials: useRef<HTMLDivElement>(null),
     contact: useRef<HTMLDivElement>(null),
   };
@@ -51,6 +51,7 @@ function App() {
       duration: 1000,
       once: true,
     });
+    AOS.refresh(); // Add this for better mobile handling
   }, []);
 
   useEffect(() => {
@@ -67,6 +68,8 @@ function App() {
       block: 'start'
     });
   };
+
+  // Structured data for SEO
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Person",
@@ -80,18 +83,22 @@ function App() {
     "description": "Professional web developer and designer specializing in modern web solutions",
     "image": "https://my-portfolio-v-03.vercel.app/preview.jpg"
   };
-  
 
-  
   return (
     <Router>
       {showIntro ? (
         <FlashIntro onComplete={() => setShowIntro(false)} />
       ) : (
         <div className="min-h-screen bg-white dark:bg-black transition-colors duration-200">
+          <script type="application/ld+json">
+            {JSON.stringify(structuredData)}
+          </script>
+          
           <Navbar isDark={isDark} toggleTheme={toggleTheme} scrollToSection={scrollToSection} />
           <Hero />
           <ContentBoxes refs={sectionRefs} />
+          
+          {/* Section Ordering */}
           <div ref={sectionRefs.about}><About /></div>
           <div ref={sectionRefs.journey}><Journey /></div>
           <div ref={sectionRefs.qualifications}><Qualifications /></div>
@@ -100,13 +107,14 @@ function App() {
           <div ref={sectionRefs.education}><Education /></div>
           <div ref={sectionRefs.gallery}><Gallery /></div>
           <div ref={sectionRefs.cubing}><CubingContent /></div>
-          <div ref={sectionRefs.inspirations}><Inspirations /></div>
-          <div ref={sectionRefs.Gaming}><Gaming /></div>
+          <div ref={sectionRefs.projects}><Projects /></div>
+          <div ref={sectionRefs.gaming}><Gaming /></div>
           <div ref={sectionRefs.funFacts}><FunFacts /></div>
-          <div ref={sectionRefs.projects}><Projects /></div> {/* Swapped position */}
-          <div ref={sectionRefs.futureGoals}><FutureGoals /></div> {/* Swapped position */}
+          <div ref={sectionRefs.inspirations}><Inspirations /></div>
+          <div ref={sectionRefs.futureGoals}><FutureGoals /></div>
           <div ref={sectionRefs.testimonials}><Testimonials /></div>
           <div ref={sectionRefs.contact}><Contact /></div>
+          
           <Footer />
         </div>
       )}

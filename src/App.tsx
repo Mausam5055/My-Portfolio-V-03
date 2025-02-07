@@ -12,7 +12,7 @@ import { Certifications } from './components/Certifications';
 import { Skills } from './components/Skills';
 import { Education } from './components/Education';
 import { Gallery } from './components/Gallery';
-// import { Artwork } from './components/Artwork';
+import { CubingContent } from './components/CubingContent';
 import { Inspirations } from './components/Inspirations';
 import { FutureGoals } from './components/FutureGoals';
 import { FunFacts } from './components/FunFacts';
@@ -36,7 +36,7 @@ function App() {
     skills: useRef<HTMLDivElement>(null),
     education: useRef<HTMLDivElement>(null),
     gallery: useRef<HTMLDivElement>(null),
-    // artwork: useRef<HTMLDivElement>(null),
+    cubing: useRef<HTMLDivElement>(null),
     inspirations: useRef<HTMLDivElement>(null),
     futureGoals: useRef<HTMLDivElement>(null),
     funFacts: useRef<HTMLDivElement>(null),
@@ -84,12 +84,11 @@ function App() {
           <div ref={sectionRefs.skills}><Skills /></div>
           <div ref={sectionRefs.education}><Education /></div>
           <div ref={sectionRefs.gallery}><Gallery /></div>
-          {/* <div ref={sectionRefs.artwork}><Artwork /></div> */}
+          <div ref={sectionRefs.cubing}><CubingContent /></div>
           <div ref={sectionRefs.blog}><Blog /></div>
           <div ref={sectionRefs.futureGoals}><FutureGoals /></div>
           <div ref={sectionRefs.funFacts}><FunFacts /></div>
           <div ref={sectionRefs.inspirations}><Inspirations /></div>
-          
           <div ref={sectionRefs.projects}><Projects /></div>
           <div ref={sectionRefs.testimonials}><Testimonials /></div>
           <div ref={sectionRefs.contact}><Contact /></div>

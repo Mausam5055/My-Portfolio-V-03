@@ -13,40 +13,6 @@ const subjects: Subject[] = [
     description: 'Explore the fundamental laws that govern our universe',
     chapters: [
       {
-        id: 'physics-0',
-        title: 'Vectors',
-        image: 'https://images.unsplash.com/photo-1527769929977-c341ee9f2033?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        description: 'Understanding Newton\'s laws and their applications',
-        driveLinks: [ 
-          'https://drive.google.com/file/d/19M8bKq4UNlVkWj2Nes24mB9ZDkv2es-c/view?usp=drive_link',
-          'https://drive.google.com/file/d/19aU1VGzH0oLM1b6UgVS59k7p6OogQGaw/view?usp=drive_link',
-          'https://drive.google.com/file/d/19fQKqQ85GSDW2RkLnpAfVg2NduwLOC4m/view?usp=drive_link'
-        ]
-      },
-    
-      {
-        id: 'physics-1',
-        title: 'Circular Motion and  Collison',
-        image: 'https://images.unsplash.com/photo-1591306208574-969f12f1ebfe?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        description: 'Understanding Newton\'s laws and their applications',
-        driveLinks: [ // Changed to array
-          'https://drive.google.com/file/d/1Y1nfKKtiw6-4GoWsmJo9ZwjSwfN-oABA/view?usp=drive_link',
-          'https://drive.google.com/file/d/1R4udKtwqPON7vPcdpsU7ZMpgMNv_HH_c/view?usp=drive_link',
-          'https://drive.google.com/file/d/1PQMzixnDiOPsdsJQWbpfn9P4d6m5ESQC/view?usp=drive_link'
-        ]
-      },
-      {
-        id: 'physics-2',
-        title: 'Thermodynamics',
-        image: 'https://images.unsplash.com/photo-1528227317825-6472d30f8b72?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        description: 'Heat, energy, and their transformations',
-        driveLinks: [ // Changed to array
-          'https://drive.google.com/file/d/1azCNr0JgU9CKiqqC_vQ3JSWx3I0oYIkL/view?usp=drive_link',
-          'https://drive.google.com/part2',
-          'https://drive.google.com/part3'
-        ]
-      },
-      {
         id: 'physics-3',
         title: 'Physics and Measurement',
         image: 'https://plus.unsplash.com/premium_photo-1683141381544-390e29f842fb?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
@@ -57,6 +23,18 @@ const subjects: Subject[] = [
           'https://drive.google.com/file/d/18Kiy3ZqS0j_-rtUgTIdimR6mahsSuxOh/view?usp=drive_link'
         ]
       },
+      {
+        id: 'physics-0',
+        title: 'Vectors',
+        image: 'https://images.unsplash.com/photo-1527769929977-c341ee9f2033?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        description: 'Understanding Newton\'s laws and their applications',
+        driveLinks: [ 
+          'https://drive.google.com/file/d/19M8bKq4UNlVkWj2Nes24mB9ZDkv2es-c/view?usp=drive_link',
+          'https://drive.google.com/file/d/19aU1VGzH0oLM1b6UgVS59k7p6OogQGaw/view?usp=drive_link',
+          'https://drive.google.com/file/d/19fQKqQ85GSDW2RkLnpAfVg2NduwLOC4m/view?usp=drive_link'
+        ]
+      },
+      
       {
         id: 'physics-4',
         title: 'Kinematics In 1-D',
@@ -83,6 +61,17 @@ const subjects: Subject[] = [
         ]
       },
       {
+        id: 'physics-1',
+        title: 'Circular Motion and  Collison',
+        image: 'https://images.unsplash.com/photo-1591306208574-969f12f1ebfe?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        description: 'Understanding Newton\'s laws and their applications',
+        driveLinks: [ // Changed to array
+          'https://drive.google.com/file/d/1Y1nfKKtiw6-4GoWsmJo9ZwjSwfN-oABA/view?usp=drive_link',
+          'https://drive.google.com/file/d/1R4udKtwqPON7vPcdpsU7ZMpgMNv_HH_c/view?usp=drive_link',
+          'https://drive.google.com/file/d/1PQMzixnDiOPsdsJQWbpfn9P4d6m5ESQC/view?usp=drive_link'
+        ]
+      },
+      {
         id: 'physics-5',
         title: 'Laws of Motion',
         image: 'https://images.unsplash.com/photo-1499871435582-a1d4ff236842?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
@@ -100,6 +89,17 @@ const subjects: Subject[] = [
         description: 'Concepts of energy, work, and power in mechanical systems',
         driveLinks: [ // Changed to array
           'https://drive.google.com/part1',
+          'https://drive.google.com/part2',
+          'https://drive.google.com/part3'
+        ]
+      },
+      {
+        id: 'physics-2',
+        title: 'Thermodynamics',
+        image: 'https://images.unsplash.com/photo-1528227317825-6472d30f8b72?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        description: 'Heat, energy, and their transformations',
+        driveLinks: [ // Changed to array
+          'https://drive.google.com/file/d/1azCNr0JgU9CKiqqC_vQ3JSWx3I0oYIkL/view?usp=drive_link',
           'https://drive.google.com/part2',
           'https://drive.google.com/part3'
         ]

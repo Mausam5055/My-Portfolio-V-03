@@ -8,7 +8,7 @@ const cubingContent: CubingContentType[] = [
     title: "2x2 Speed Solve",
     image: "/assets/cube2.jpg",
     description: "Quick 2x2 solve using Ortega method.",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    videoUrl: "",
     cubeType: "2x2 Cube",
     solveTime: "3.21 seconds"
   },
@@ -16,7 +16,7 @@ const cubingContent: CubingContentType[] = [
     title: "3x3 Speed Solve",
     image: "https://images.unsplash.com/photo-1577401239170-897942555fb3?q=80&w=2048&auto=format&fit=crop",
     description: "Personal best solve on the 3x3 Rubik's cube using CFOP method.",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    videoUrl: "",
     cubeType: "3x3 Rubik's Cube",
     solveTime: "10.45 seconds"
   },
@@ -24,7 +24,7 @@ const cubingContent: CubingContentType[] = [
     title: "4x4 Solve",
     image: "/assets/cube4.webp",
     description: "4x4 cube solve demonstration with Yau method.",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    videoUrl: "",
     cubeType: "4x4 Cube",
     solveTime: "45.32 seconds"
   },
@@ -33,7 +33,7 @@ const cubingContent: CubingContentType[] = [
     title: "5x5 Solve",
     image: "https://plus.unsplash.com/premium_photo-1668736594225-55e292fdd95e?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     description: "5x5 cube solve with reduction method.",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    videoUrl: "",
     cubeType: "5x5 Cube",
     solveTime: "1:45.67"
   },

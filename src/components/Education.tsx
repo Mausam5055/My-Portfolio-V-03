@@ -63,7 +63,7 @@ const subjects: Subject[] = [
       {
         id: 'physics-1',
         title: 'Circular Motion and  Collison',
-        image: 'https://images.unsplash.com/photo-1591306208574-969f12f1ebfe?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        image: '/assets/circular.png',
         description: 'Understanding Newton\'s laws and their applications',
         driveLinks: [ // Changed to array
           'https://drive.google.com/file/d/1Y1nfKKtiw6-4GoWsmJo9ZwjSwfN-oABA/view?usp=drive_link',
@@ -97,7 +97,7 @@ const subjects: Subject[] = [
       {
         id: 'physics-2',
         title: 'Heat and Thermodynamics',
-        image: 'https://images.unsplash.com/photo-1528227317825-6472d30f8b72?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        image: '/assets/thermodynamics.png',
         description: 'Heat, energy, and their transformations',
         driveLinks: [ // Changed to array
           'https://drive.google.com/file/d/1cgMSF4ThC5QZz1AQnOuIWzrwVdonxAD4/view?usp=drive_link',
@@ -137,7 +137,7 @@ const subjects: Subject[] = [
       {
         id: 'physics-9',
         title: 'Elasticity',
-        image: 'https://plus.unsplash.com/premium_photo-1674203955483-b6dc5445b8f7?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        image: '/assets/elasticity.jpg',
         description: 'Study of the mechanical properties of solids and liquids',
         driveLinks: [ // Changed to array
          'https://drive.google.com/file/d/1XGb8j_HxO2czSo9HHzJJvhR2WAxCvQ48/view?usp=drive_link',
@@ -149,12 +149,13 @@ const subjects: Subject[] = [
       {
         id: 'physics-10',
         title: 'Fluid Mechanics',
-        image: 'https://images.unsplash.com/photo-1580064461598-505b080a8242?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        image: '/assets/fluids.jpg',
         description: 'Behavior of gases and their molecular motion',
         driveLinks: [ // Changed to array
           'https://drive.google.com/file/d/1_rEMbP9DTgvkOJrEPQLv2rxZTgqFb3iF/view?usp=drive_link',
           'https://drive.google.com/file/d/1cL-a5kEr2uprspO3lDVKrJRfBT5n_w5D/view?usp=drive_link',
-          'https://drive.google.com/file/d/1_q0ccX6FUYfNBFd5yYSIQI7N2i_zhlrn/view?usp=drive_link'
+          'https://drive.google.com/file/d/1HgrclC6N4w4mCmZ79_c30dXVmyto1rgL/view?usp=sharing',
+          'https://drive.google.com/file/d/1_q0ccX6FUYfNBFd5yYSIQI7N2i_zhlrn/view?usp=drive_link',
         ]
       },
       {

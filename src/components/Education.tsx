@@ -26,7 +26,7 @@ const subjects: Subject[] = [
       {
         id: 'physics-0',
         title: 'Vectors',
-        image: 'https://images.unsplash.com/photo-1527769929977-c341ee9f2033?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        image: 'assets/vectors.jpg',
         description: 'Understanding Newton\'s laws and their applications',
         driveLinks: [ 
           'https://drive.google.com/file/d/19M8bKq4UNlVkWj2Nes24mB9ZDkv2es-c/view?usp=drive_link',
@@ -51,7 +51,7 @@ const subjects: Subject[] = [
       {
         id: 'physics-4',
         title: 'Kinematics In 2-D',
-        image: 'https://images.unsplash.com/photo-1633493702341-4d04841df53b?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        image: '/assets/2d.png',
         description: 'Study of motion without considering forces',
         driveLinks: [ // Changed to array
           'https://drive.google.com/file/d/1FFRcQZXQ0CwIuiROeEIv2e8-c9DtPVU5/view?usp=drive_link',
@@ -68,7 +68,8 @@ const subjects: Subject[] = [
         driveLinks: [ // Changed to array
           'https://drive.google.com/file/d/1Y1nfKKtiw6-4GoWsmJo9ZwjSwfN-oABA/view?usp=drive_link',
           'https://drive.google.com/file/d/1R4udKtwqPON7vPcdpsU7ZMpgMNv_HH_c/view?usp=drive_link',
-          'https://drive.google.com/file/d/1PQMzixnDiOPsdsJQWbpfn9P4d6m5ESQC/view?usp=drive_link'
+         ' https://drive.google.com/file/d/1bRL70ZbCPdkyGEHdv8FzMxF5PKM0yjtD/view?usp=drive_link',
+         'https://drive.google.com/file/d/1atHwLUN1QuQowPs8Badem52KlZb8k0yV/view?usp=drive_link'
         ]
       },
       {
@@ -88,20 +89,22 @@ const subjects: Subject[] = [
         image: 'https://images.unsplash.com/photo-1736664030438-251abe59a342?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         description: 'Concepts of energy, work, and power in mechanical systems',
         driveLinks: [ // Changed to array
-          'https://drive.google.com/part1',
-          'https://drive.google.com/part2',
-          'https://drive.google.com/part3'
+          'https://drive.google.com/file/d/1S0UK45n5fOTXDeYgBW9GKOG8GtjfQh1O/view?usp=drive_link',
+          'https://drive.google.com/file/d/1S7EhhoYjZdAYFCPIpTfhVU4V1bh4b_YW/view?usp=drive_link',
+          'https://drive.google.com/file/d/1PakpqLWQFM0S15JS6b_9FYUYX-9gbxAA/view?usp=drive_link'
         ]
       },
       {
         id: 'physics-2',
-        title: 'Thermodynamics',
+        title: 'Heat and Thermodynamics',
         image: 'https://images.unsplash.com/photo-1528227317825-6472d30f8b72?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         description: 'Heat, energy, and their transformations',
         driveLinks: [ // Changed to array
-          'https://drive.google.com/file/d/1azCNr0JgU9CKiqqC_vQ3JSWx3I0oYIkL/view?usp=drive_link',
-          'https://drive.google.com/part2',
-          'https://drive.google.com/part3'
+          'https://drive.google.com/file/d/1cgMSF4ThC5QZz1AQnOuIWzrwVdonxAD4/view?usp=drive_link',
+          'https://drive.google.com/file/d/1YUTHkOUKGDO8fxdzJsJrzNulcIgKimmM/view?usp=drive_link',
+          'https://drive.google.com/file/d/1Ys5_0y3DWey5tgHSIpkNS32IfBR7JS7U/view?usp=drive_link',
+          'https://drive.google.com/file/d/1WpXlz4XebeemRe2GWmUJLddQDWPsUh9U/view?usp=drive_link',
+          'https://drive.google.com/file/d/1azCNr0JgU9CKiqqC_vQ3JSWx3I0oYIkL/view?usp=drive_link'
         ]
       },
       {
@@ -110,9 +113,11 @@ const subjects: Subject[] = [
         image: 'https://plus.unsplash.com/premium_photo-1674677530857-ed558c650f31?q=80&w=1938&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         description: 'Study of objects rotating around an axis',
         driveLinks: [ // Changed to array
-          'https://drive.google.com/part1',
-          'https://drive.google.com/part2',
-          'https://drive.google.com/part3'
+          'https://drive.google.com/file/d/1atshpqN2MjpAA73jQLvM0Pzy-hV86Rem/view?usp=drive_link',
+          'https://drive.google.com/file/d/1Ys9z4NnfD67n9--FYywDVEK8SsPb7D1B/view?usp=drive_link',
+          'https://drive.google.com/file/d/1Wj9NbBxgMvxwLn7pputTJuBYrbA-EVZb/view?usp=drive_link',
+          'https://drive.google.com/file/d/1Wl6yZG8caqJ7H7Zr_73NGt97ikBAaBtE/view?usp=drive_link',
+          'https://drive.google.com/file/d/1Wlgqvf7PF_HS5s78qcUwPQwPKHC7Og8j/view?usp=drive_link'
         ]
       },
       {
@@ -121,20 +126,35 @@ const subjects: Subject[] = [
         image: 'https://images.unsplash.com/photo-1722331329513-8c6570f58af3?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         description: 'The force of attraction between masses',
         driveLinks: [ // Changed to array
-          'https://drive.google.com/part1',
-          'https://drive.google.com/part2',
-          'https://drive.google.com/part3'
+          'https://drive.google.com/file/d/1b-wdMpjyKI6SNWb_V_JJAMeN_FsorIT3/view?usp=drive_link',
+          'https://drive.google.com/file/d/1b5pmFMq1Uv_7geL7Vb-SDUOiP-OKlq-s/view?usp=drive_link',
+          'https://drive.google.com/file/d/1qF7neLlb94TVDxDb6GumQ1Fg5Tld3_RZ/view?usp=drive_link',
+          'https://drive.google.com/file/d/1afGi-zQ-pnVYktsb9n5x2sJTYy5tAan7/view?usp=drive_link',
+          'https://drive.google.com/file/d/1b7DAFMv42RJ-9k1JWjcNOECYyTTLeZBx/view?usp=drive_link'
+
         ]
       },
       {
         id: 'physics-9',
-        title: 'Properties of Solids and Liquids',
+        title: 'Elasticity',
         image: 'https://plus.unsplash.com/premium_photo-1674203955483-b6dc5445b8f7?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         description: 'Study of the mechanical properties of solids and liquids',
         driveLinks: [ // Changed to array
-          'https://drive.google.com/part1',
-          'https://drive.google.com/part2',
-          'https://drive.google.com/part3'
+         'https://drive.google.com/file/d/1XGb8j_HxO2czSo9HHzJJvhR2WAxCvQ48/view?usp=drive_link',
+         'https://drive.google.com/file/d/1Y_BtNFGZm6YFzKJcWoX_DnJkGG9gRiJD/view?usp=drive_link',
+         ''
+        ]
+        
+      },
+      {
+        id: 'physics-10',
+        title: 'Fluid Mechanics',
+        image: 'https://images.unsplash.com/photo-1580064461598-505b080a8242?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        description: 'Behavior of gases and their molecular motion',
+        driveLinks: [ // Changed to array
+          'https://drive.google.com/file/d/1_rEMbP9DTgvkOJrEPQLv2rxZTgqFb3iF/view?usp=drive_link',
+          'https://drive.google.com/file/d/1cL-a5kEr2uprspO3lDVKrJRfBT5n_w5D/view?usp=drive_link',
+          'https://drive.google.com/file/d/1_q0ccX6FUYfNBFd5yYSIQI7N2i_zhlrn/view?usp=drive_link'
         ]
       },
       {
@@ -143,9 +163,7 @@ const subjects: Subject[] = [
         image: 'https://images.unsplash.com/photo-1580064461598-505b080a8242?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         description: 'Behavior of gases and their molecular motion',
         driveLinks: [ // Changed to array
-          'https://drive.google.com/part1',
-          'https://drive.google.com/part2',
-          'https://drive.google.com/part3'
+          'https://drive.google.com/file/d/1b73JNyrTNHGMYq01UZIxahWHZRqXNPce/view?usp=sharing',
         ]
       },
       {
@@ -154,9 +172,11 @@ const subjects: Subject[] = [
         image: 'https://plus.unsplash.com/premium_photo-1668480227885-5193c6255182?q=80&w=1854&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         description: 'Study of periodic motion and wave phenomena',
         driveLinks: [ // Changed to array
-          'https://drive.google.com/part1',
-          'https://drive.google.com/part2',
-          'https://drive.google.com/part3'
+          'https://drive.google.com/file/d/1bNwKteUQOgmZmwEIxGwmGcXgT9eXAM1C/view?usp=drive_link',
+          'https://drive.google.com/file/d/1bWmpxjJrgP0YADlZztJILEBOuJIQpB5u/view?usp=drive_link',
+          'https://drive.google.com/file/d/1X2dsUmah6brMIjQjov9_tQrKt8IaDg9X/view?usp=drive_link',
+          'https://drive.google.com/file/d/1bkNZvJMInUH-OPNGoVVguivR7WvfZIEl/view?usp=drive_link'
+          
         ]
       },
       {

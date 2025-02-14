@@ -12,7 +12,7 @@ const goals: Goal[] = [
     id: '1',
     title: 'Master Advanced Web Technologies',
     description: 'Deepen expertise in modern web frameworks and tools',
-    timeline: '2024-2025',
+    timeline: '2025-2027',
     progress: 60,
     icon: 'Code2',
     milestones: [
@@ -25,7 +25,7 @@ const goals: Goal[] = [
     id: '2',
     title: 'Launch Tech Startup',
     description: 'Create innovative solutions for creative professionals',
-    timeline: '2025',
+    timeline: '2028',
     progress: 30,
     icon: 'Rocket',
     milestones: [
@@ -38,7 +38,7 @@ const goals: Goal[] = [
     id: '3',
     title: 'Advanced AI Certification',
     description: 'Specialize in AI and machine learning applications',
-    timeline: '2024',
+    timeline: '2028',
     progress: 45,
     icon: 'GraduationCap',
     milestones: [

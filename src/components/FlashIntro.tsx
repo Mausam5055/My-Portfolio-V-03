@@ -2,8 +2,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
 const greetings = [
-  'Namaste', 'Hello', 'こんにちは', 'Hola', 'Ciao', 
-  , '안녕하세요', '你好'
+ 'Namaste', 'Hello', 'হ্যালো', 'Hola', 'Ciao', 'নমস্কার', 'नमस्ते'
 ];
 
 interface FlashIntroProps { // Updated interface name

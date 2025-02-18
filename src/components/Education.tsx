@@ -182,24 +182,57 @@ const subjects: Subject[] = [
       },
       {
         id: 'physics-12',
-        title: 'Electrostatics',
+        title: 'Electrostatics-1',
+        image: '/assets/electrostatics.jpeg',
+        description: 'Study of electric charges and their interactions',
+        driveLinks: [ // Changed to array
+          'https://drive.google.com/file/d/1XFU0I-tMmvX7UhaFz5GdZG3TbVcJKBpZ/view?usp=drive_link',
+          'https://drive.google.com/file/d/1XOscLU-5ydyaMxPDhVj9HknpIpvcetzH/view?usp=drive_link',
+          'https://drive.google.com/file/d/1XFpNo6pXCt62IwBHLHVqhfoWRZYrE03t/view?usp=drive_link',
+          'https://drive.google.com/file/d/1XS0p_gFljDfEQ1OuM8dGQgiYwalw58Bd/view?usp=drive_link',
+          'https://drive.google.com/file/d/1hXs7ccJ73AUp7TKP1zBIDkBQk8TCJmZB/view?usp=drive_link',
+          
+         
+        ]
+      },
+      {
+        id: 'physics-13',
+        title: 'Electrostatics-2',
         image: 'https://plus.unsplash.com/premium_photo-1664302244254-0b614b519f19?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         description: 'Study of electric charges and their interactions',
         driveLinks: [ // Changed to array
-          'https://drive.google.com/part1',
-          'https://drive.google.com/part2',
-          'https://drive.google.com/part3'
+       'https://drive.google.com/file/d/1ht5fHl_K6gadJMeebzMFYXxga3W4cTyB/view?usp=drive_link',
+       'https://drive.google.com/file/d/1hvjNVluchCQHl2A0D-YXj61s9U9r3BQ_/view?usp=drive_link',
+       'https://drive.google.com/file/d/1i3JqbHmP5o9o098FJWK1R4TxAv9M4hUW/view?usp=drive_link',
+       'https://drive.google.com/file/d/1hfn4rtNqc-Sq5lZVWznUs8Zjx4DTA30O/view?usp=drive_link'
         ]
       },
       {
         id: 'physics-13',
         title: 'Current Electricity',
+        image: '/assets/current.jpeg',
+        description: 'Study of electric current and its effects',
+        driveLinks: [ // Changed to array
+          'https://drive.google.com/file/d/1k6Zv4pjcDMJTiTwO17DOUSnCsEOjV-UJ/view?usp=drive_link',
+          'https://drive.google.com/file/d/1KcNDIdaIus_CKXk8CevRgdUgGeRCWyGL/view?usp=drive_link',
+          'https://drive.google.com/file/d/1i1jNDHpu6cFhERvdr6GCLJ7Mnu3rFddh/view?usp=drive_link',
+          'https://drive.google.com/file/d/1XOsMGNm70lefEtEHqLrNsbksuNWicdOa/view?usp=drive_link'
+          
+          
+          
+        ]
+      },
+      {
+        id: 'physics-13',
+        title: 'Current Electricity-2',
         image: 'https://images.unsplash.com/photo-1474314243412-cd4a79f02c6a?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         description: 'Study of electric current and its effects',
         driveLinks: [ // Changed to array
-          'https://drive.google.com/part1',
-          'https://drive.google.com/part2',
-          'https://drive.google.com/part3'
+          'https://drive.google.com/file/d/1IAQzkGeB2n8bSd4p77ZHdszadR97CjM6/view?usp=drive_link',
+          'https://drive.google.com/file/d/1I9NYgJOxKqdSoqIpnVxZTSCBcJ1s4Xpp/view?usp=drive_link',
+          'https://drive.google.com/file/d/1HqNtoaM-BVI8M2U41BDQ-h18MZrABhLY/view?usp=drive_link',
+          'https://drive.google.com/file/d/1XISMsWXLw5CSrKmYTtg3aQGX0_rc1Dmv/view?usp=drive_link',
+          
         ]
       },
       {
@@ -230,20 +263,33 @@ const subjects: Subject[] = [
         image: 'https://plus.unsplash.com/premium_photo-1667119473280-23ed9fb45573?q=80&w=2000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         description: 'Behavior and properties of electromagnetic waves',
         driveLinks: [ // Changed to array
-          'https://drive.google.com/part1',
-          'https://drive.google.com/part2',
+          'https://drive.google.com/file/d/1mgS-b_geCP1yLZEHoNr7fBiFCJMjj7h-/view?usp=drive_link',
+          'https://drive.google.com/file/d/12Vs_zaF0thGHM3UFSj6OTdOVb5ujmoj8/view?usp=drive_link',
           'https://drive.google.com/part3'
         ]
       },
       {
         id: 'physics-17',
-        title: 'Optics',
-        image: 'https://images.unsplash.com/photo-1597733336794-12d05021d510?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        title: 'Ray Optics',
+        image: '/assets/ray.png',
         description: 'Study of light and its behavior',
         driveLinks: [ // Changed to array
-          'https://drive.google.com/part1',
-          'https://drive.google.com/part2',
-          'https://drive.google.com/part3'
+          'https://drive.google.com/file/d/1L6DiXUB7TOfiBr30xVgO89N0ri3CKoiJ/view?usp=drive_link',
+          'https://drive.google.com/file/d/1L7zMt0_HnY1lsZlOf7TUbOFc5d3kkb5f/view?usp=drive_link',
+          'https://drive.google.com/file/d/1XN09DXgd8RAHdNORGnGmkk9qaNz3p2fD/view?usp=drive_link',
+          'https://drive.google.com/file/d/1172BNdgMhT7WOaYiC_T07aBzDAvCzTUc/view?usp=drive_link'
+        ]
+      },
+      {
+        id: 'physics-17',
+        title: 'Wave Optics',
+        image: '/assets/wave.jpg',
+        description: 'Study of light and its behavior',
+        driveLinks: [ // Changed to array
+          'https://drive.google.com/file/d/15dANG9oIrh7Qs7pgWBoZivkl9DTOk8xe/view?usp=drive_link',
+          'https://drive.google.com/file/d/1GFtA6CAcPdxBbGPasJvXziiUWeofQgBB/view?usp=drive_link',
+          'https://drive.google.com/file/d/1GFTzacmJ9g8sL_3zcPOVve3lfn5pPi3P/view?usp=drive_link',
+          'https://drive.google.com/file/d/1s_QdQcPAWw8BHgLmdP1W8fjjxqYEolsG/view?usp=drive_link'
         ]
       },
       {
@@ -252,8 +298,8 @@ const subjects: Subject[] = [
         image: 'https://plus.unsplash.com/premium_photo-1674841442871-1bc9d6a2261b?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         description: 'The wave-particle duality of matter and radiation',
         driveLinks: [ // Changed to array
+          'https://drive.google.com/file/d/1itfskkkCSuRmC3712dDpuGdsOavxwUDG/view?usp=sharing',
           'https://drive.google.com/part1',
-          'https://drive.google.com/part2',
           'https://drive.google.com/part3'
         ]
       },
@@ -263,9 +309,10 @@ const subjects: Subject[] = [
         image: 'https://plus.unsplash.com/premium_photo-1673830981214-1b149337aa28?q=80&w=1915&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         description: 'Structure and behavior of atoms and their nuclei',
         driveLinks: [ // Changed to array
-          'https://drive.google.com/part1',
-          'https://drive.google.com/part2',
-          'https://drive.google.com/part3'
+          'https://drive.google.com/file/d/12UzApZW4HIsbhSyAcqH2uw5oivJWxqDN/view?usp=sharing',
+          'https://drive.google.com/file/d/1iQgNxZgkYlHTCmDNZdhEwV6j-kiGklIb/view?usp=drive_link',
+          'https://drive.google.com/file/d/1XgZ3Pv_naEOqID_oPVZbb_0V1I4o5Y7t/view?usp=drive_link',
+          'https://drive.google.com/file/d/1tZKbhxipZf7BX5KkpisJsOa2PuU6UzaQ/view?usp=drive_link'
         ]
       },
       {
@@ -274,7 +321,7 @@ const subjects: Subject[] = [
         image: 'https://images.unsplash.com/photo-1562408590-e32931084e23?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         description: 'Study of electronic components and circuits',
         driveLinks: [ // Changed to array
-          'https://drive.google.com/part1',
+          'https://drive.google.com/file/d/1iVRJ-u0L95eQ_6nnDr1YeKmje_Rbru-x/view?usp=sharing',
           'https://drive.google.com/part2',
           'https://drive.google.com/part3'
         ]
@@ -285,9 +332,9 @@ const subjects: Subject[] = [
         image: 'https://plus.unsplash.com/premium_photo-1679079456083-9f288e224e96?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         description: 'Principles of communication and information transfer',
         driveLinks: [ // Changed to array
-          'https://drive.google.com/part1',
-          'https://drive.google.com/part2',
-          'https://drive.google.com/part3'
+          'https://drive.google.com/file/d/1l2WaL3HQ-36YNHpNhmgSx80DPN6oBBc9/view?usp=drive_link',
+          'https://drive.google.com/file/d/1l-rTy4u7gwKN3Z2LcQ74jNLjKUlZR9zo/view?usp=drive_link',
+          'https://drive.google.com/file/d/1afGi-zQ-pnVYktsb9n5x2sJTYy5tAan7/view?usp=drive_link'
         ]
       }
     ]

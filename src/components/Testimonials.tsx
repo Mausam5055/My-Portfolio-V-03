@@ -10,7 +10,7 @@ const testimonials: Testimonial[] = [
     name: 'Mangal Singh',
     role: 'Creative Director',
     company: 'Design Studio Co.',
-    image: '/assets/mangal.jpg',
+    image: '/assets/testimonials/mangal.jpg',
     content: '✔️Working with Mausam was an absolute pleasure. his attention to detail and creative approach brought our vision to life in ways we couldn\'t have imagined.',
     rating: 5
   },
@@ -19,7 +19,7 @@ const testimonials: Testimonial[] = [
     name: 'Sauvik kar',
     role: 'Tech Lead',
     company: 'Innovation Labs',
-    image: '/assets/sauvik.jpg',
+    image: '/assets/testimonials/sauvik.jpg',
     content: '✔️Mausam\'s technical expertise combined with his artistic flair produced exceptional results. He\'s a true professional who delivers beyond expectations.',
     rating: 4.2
   },
@@ -28,7 +28,7 @@ const testimonials: Testimonial[] = [
  name: 'Priyanka Nath',
     role: 'Product Manager',
     company: 'Tech Innovations',
-    image: '/assets/priyanka.jpg',
+    image: '/assets/testimonials/priyanka.jpg',
     content: '✔️The level of creativity and technical skill Mausam brings to projects is remarkable. He has a unique ability to transform complex ideas into beautiful, functional solutions.',
     rating: 3.8
   },
@@ -37,7 +37,7 @@ const testimonials: Testimonial[] = [
     name: 'Papiya Nath',
     role: 'Marketing Specialist',
     company: 'Creative Agency',
-    image: '/assets/papiya.jpg ',
+    image: '/assets/testimonials/papiya.jpg ',
     content: '✔️Mausam has a knack for understanding client needs and delivering results that exceed expectations. Highly recommended!',
     rating: 3
   },
@@ -46,7 +46,7 @@ const testimonials: Testimonial[] = [
     name: 'Ashish Sharma',
     role: 'UX Designer',
     company: 'Design Hub',
-    image: '/assets/asish.jpg',
+    image: '/assets/testimonials/asish.jpg',
     content: '✔️his designs are not only visually stunning but also user-friendly. Mausam is a true asset to any team.',
     rating: 4.5
   },
@@ -55,7 +55,7 @@ const testimonials: Testimonial[] = [
     name: 'Nobojyoti Sinha',
     role: 'Software Engineer',
     company: 'Tech Solutions',
-    image: '/assets/nobojyoti.jpg',
+    image: '/assets/testimonials/nobojyoti.jpg',
     content: '✔️Working with Mausam was a game-changer for our project. his insights and creativity made a significant impact.',
     rating: 4.1
   },
@@ -64,7 +64,7 @@ const testimonials: Testimonial[] = [
     name: 'Abhijeet Sharma',
     role: 'Content Strategist',
     company: 'Media Group',
-    image: '/assets/abhijit.jpg',
+    image: '/assets/testimonials/abhijit.jpg',
     content: '✔️Mausam’s ability to blend storytelling with design is exceptional. He brings ideas to life in a unique way.',
     rating: 4
   },
@@ -73,7 +73,7 @@ const testimonials: Testimonial[] = [
     name: 'Sharmee Roy',
     role: 'Business Analyst',
     company: 'Consulting Firm',
-    image: '/assets/sharmee.jpg',
+    image: '/assets/testimonials/sharmee.jpg',
     content: '✔️His analytical skills combined with creativity make his a valuable team member. I look forward to working with his again.',
     rating: 4.7
   },
@@ -82,7 +82,7 @@ const testimonials: Testimonial[] = [
     name: 'Raj Kumar',
     role: 'Project Coordinator',
     company: 'Global Enterprises',
-    image: '/assets/raj.webp',
+    image: '/assets/testimonials/raj.webp',
     content: '✔️Mausam’s professionalism and dedication to his work are truly inspiring. He consistently delivers high-quality results.',
     rating: 3.9
   }

@@ -137,7 +137,7 @@ const subjects: Subject[] = [
       {
         "id": "physics-12",
         "title": "Gravitation-1",
-        "image": "/assets/physics/gravitation1.jpg",
+        "image": "/assets/physics/gravitation.jpg",
         "description": "The force of attraction between masses",
         "driveLinks": [
           "https://drive.google.com/file/d/1b-wdMpjyKI6SNWb_V_JJAMeN_FsorIT3/view?usp=drive_link",
@@ -148,7 +148,7 @@ const subjects: Subject[] = [
       {
         "id": "physics-13",
         "title": "Gravitation-2",
-        "image": "/assets/physics/gravitation2.jpg",
+        "image": "https://images.unsplash.com/photo-1722331329498-fd3fd0af6e06?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "description": "The force of attraction between masses",
         "driveLinks": [
           "https://drive.google.com/file/d/1afGi-zQ-pnVYktsb9n5x2sJTYy5tAan7/view?usp=drive_link",
@@ -169,7 +169,7 @@ const subjects: Subject[] = [
       {
         "id": "physics-15",
         "title": "Fluid Mechanics",
-        "image": "/assets/physics/fluid_mechanics.jpg",
+        "image": "/assets/physics/fluids.jpg",
         "description": "Behavior of gases and their molecular motion",
         "driveLinks": [
           "https://drive.google.com/file/d/1_rEMbP9DTgvkOJrEPQLv2rxZTgqFb3iF/view?usp=drive_link",
@@ -181,7 +181,7 @@ const subjects: Subject[] = [
       {
         "id": "physics-16",
         "title": "Kinetic Theory of Gases",
-        "image": "/assets/physics/kinetic_theory_of_gases.jpg",
+        "image": "/assets/physics/kinetic.jpg",
         "description": "Behavior of gases and their molecular motion",
         "driveLinks": [
           "https://drive.google.com/file/d/1b73JNyrTNHGMYq01UZIxahWHZRqXNPce/view?usp=sharing"
@@ -190,7 +190,7 @@ const subjects: Subject[] = [
       {
         "id": "physics-17",
         "title": "Oscillations and Waves",
-        "image": "/assets/physics/oscillations_and_waves.jpg",
+        "image": "/assets/physics/oscillation.jpg",
         "description": "Study of periodic motion and wave phenomena",
         "driveLinks": [
           "https://drive.google.com/file/d/1bNwKteUQOgmZmwEIxGwmGcXgT9eXAM1C/view?usp=drive_link",
@@ -202,7 +202,7 @@ const subjects: Subject[] = [
       {
         "id": "physics-18",
         "title": "Electrostatics-1",
-        "image": "/assets/physics/electrostatics1.jpg",
+        "image": "/assets/physics/electrostatics1.jpeg",
         "description": "Study of electric charges and their interactions",
         "driveLinks": [
           "https://drive.google.com/file/d/1XFU0I-tMmvX7UhaFz5GdZG3TbVcJKBpZ/view?usp=drive_link",
@@ -213,7 +213,7 @@ const subjects: Subject[] = [
       {
         "id": "physics-19",
         "title": "Electrostatics-2",
-        "image": "/assets/physics/electrostatics2.jpg",
+        "image": "https://plus.unsplash.com/premium_photo-1664302244254-0b614b519f19?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "description": "Study of electric charges and their interactions",
         "driveLinks": [
           "https://drive.google.com/file/d/1XS0p_gFljDfEQ1OuM8dGQgiYwalw58Bd/view?usp=drive_link",
@@ -235,7 +235,7 @@ const subjects: Subject[] = [
       {
         "id": "physics-21",
         "title": "Current Electricity",
-        "image": "/assets/physics/current_electricity.jpg",
+        "image": "https://images.unsplash.com/photo-1534224039826-c7a0eda0e6b3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "description": "Study of electric current and its effects",
         "driveLinks": [
           "https://drive.google.com/file/d/1k6Zv4pjcDMJTiTwO17DOUSnCsEOjV-UJ/view?usp=drive_link",
@@ -247,7 +247,7 @@ const subjects: Subject[] = [
       {
         "id": "physics-22",
         "title": "Current Electricity-2",
-        "image": "/assets/physics/current_electricity2.jpg",
+        "image": "https://images.unsplash.com/photo-1582481024061-4be0e115414f?q=80&w=2079&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "description": "Study of electric current and its effects",
         "driveLinks": [
           "https://drive.google.com/file/d/1IAQzkGeB2n8bSd4p77ZHdszadR97CjM6/view?usp=drive_link",
@@ -259,7 +259,7 @@ const subjects: Subject[] = [
       {
         "id": "physics-23",
         "title": "Magnetic Effects of Current",
-        "image": "/assets/physics/magnetic_effects_of_current.jpg",
+        "image": "/assets/physics/mec.png",
         "description": "Understanding magnetic fields and their effects",
         "driveLinks": [
           "https://drive.google.com/file/d/1SUJFGY1JhzxyMN04JysQ51INOajuXKos/view?usp=drive_link",
@@ -271,7 +271,7 @@ const subjects: Subject[] = [
       {
         "id": "physics-24",
         "title": "Magnetic Effects of Current-2",
-        "image": "/assets/physics/magnetic_effects_of_current2.jpg",
+        "image": "/assets/physics/mec2.png",
         "description": "Understanding magnetic fields and their effects",
         "driveLinks": [
           "https://drive.google.com/file/d/1XR9NTv74_5RB42h344RmSDkz2BbXZcdm/view?usp=drive_link",
@@ -282,7 +282,7 @@ const subjects: Subject[] = [
       {
         "id": "physics-25",
         "title": "Magnetism-1",
-        "image": "/assets/physics/magnetism1.jpg",
+        "image": "https://plus.unsplash.com/premium_photo-1682309664650-6683b2fbc790?q=80&w=2112&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "description": "Understanding magnetic fields and their effects",
         "driveLinks": [
           "https://drive.google.com/file/d/1WE2hO0AEuSUwzAlQIGEHmZTo-PYWhva8/view?usp=drive_link",
@@ -293,7 +293,7 @@ const subjects: Subject[] = [
       {
         "id": "physics-26",
         "title": "Magnetism-2",
-        "image": "/assets/physics/magnetism2.jpg",
+        "image": "/assets/physics/magnetism.jpg",
         "description": "Understanding magnetic fields and their effects",
         "driveLinks": [
           "https://drive.google.com/file/d/1VcJGl2LYp2a6ipvANmaeIy8XorXfZMlB/view?usp=drive_link",
@@ -303,7 +303,7 @@ const subjects: Subject[] = [
       {
         "id": "physics-27",
         "title": "Alternating Currents",
-        "image": "/assets/physics/alternating_currents.jpg",
+        "image": "/assets/physics/current.jpeg",
         "description": "Study of induced currents and alternating current circuits",
         "driveLinks": [
           "https://drive.google.com/file/d/1XF8UL9IMy7Qag-VrdD4Oi8lBF1D-m91Y/view?usp=drive_link",
@@ -315,7 +315,7 @@ const subjects: Subject[] = [
       {
         "id": "physics-28",
         "title": "Electromagnetic Induction-1",
-        "image": "/assets/physics/electromagnetic_induction1.jpg",
+        "image": "/assets/physics/emi.jpg",
         "description": "Study of induced currents and alternating current circuits",
         "driveLinks": [
           "https://drive.google.com/file/d/1kXLuBUEsI9X_6MiEWpVdmWRlCJYw9MED/view?usp=drive_link",
@@ -326,7 +326,7 @@ const subjects: Subject[] = [
       {
         "id": "physics-29",
         "title": "Electromagnetic Induction-2",
-        "image": "/assets/physics/electromagnetic_induction2.jpg",
+        "image": "/assets/physics/emi2.png",
         "description": "Study of induced currents and alternating current circuits",
         "driveLinks": [
           "https://drive.google.com/file/d/14yVWC3eVhYPEnMWK4RxiHuFk5NJO4WHn/view?usp=drive_link",
@@ -337,7 +337,7 @@ const subjects: Subject[] = [
       {
         "id": "physics-30",
         "title": "Electromagnetic Waves",
-        "image": "/assets/physics/electromagnetic_waves.jpg",
+        "image": "/assets/physics/emw.png",
         "description": "Behavior and properties of electromagnetic waves",
         "driveLinks": [
           "https://drive.google.com/file/d/1mgS-b_geCP1yLZEHoNr7fBiFCJMjj7h-/view?usp=drive_link",
@@ -348,7 +348,7 @@ const subjects: Subject[] = [
       {
         "id": "physics-31",
         "title": "Ray Optics",
-        "image": "/assets/physics/ray_optics.jpg",
+        "image": "/assets/physics/ray.png",
         "description": "Study of light and its behavior",
         "driveLinks": [
           "https://drive.google.com/file/d/1L6DiXUB7TOfiBr30xVgO89N0ri3CKoiJ/view?usp=drive_link",
@@ -360,7 +360,7 @@ const subjects: Subject[] = [
       {
         "id": "physics-32",
         "title": "Wave Optics",
-        "image": "/assets/physics/wave_optics.jpg",
+        "image": "/assets/physics/wave.jpg",
         "description": "Study of light and its behavior",
         "driveLinks": [
           "https://drive.google.com/file/d/15dANG9oIrh7Qs7pgWBoZivkl9DTOk8xe/view?usp=drive_link",
@@ -372,7 +372,7 @@ const subjects: Subject[] = [
       {
         "id": "physics-33",
         "title": "Dual Nature of Matter and Radiation",
-        "image": "/assets/physics/dual_nature_of_matter.jpg",
+        "image": "/assets/physics/DNMR.jpeg",
         "description": "The wave-particle duality of matter and radiation",
         "driveLinks": [
           "https://drive.google.com/file/d/1itfskkkCSuRmC3712dDpuGdsOavxwUDG/view?usp=sharing",
@@ -383,7 +383,7 @@ const subjects: Subject[] = [
       {
         "id": "physics-34",
         "title": "Atoms and Nuclei",
-        "image": "/assets/physics/atoms_and_nuclei.jpg",
+        "image": "https://plus.unsplash.com/premium_photo-1669658980877-7b4da0f675ac?q=80&w=1952&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "description": "Structure and behavior of atoms and their nuclei",
         "driveLinks": [
           "https://drive.google.com/file/d/12UzApZW4HIsbhSyAcqH2uw5oivJWxqDN/view?usp=sharing",
@@ -890,7 +890,7 @@ const subjects: Subject[] = [
       {
         id: 'aiml-1',
         title: 'Artificial Intelligence and Machine Learning',
-        image: 'assets/aiml.png',
+        image: 'assets/coding/aiml.png',
         description: 'Introduction to AI and ML concepts',
         driveLinks: [
           // 'https://drive.google.com/part1',
@@ -901,7 +901,7 @@ const subjects: Subject[] = [
       {
         id: 'python-1',
         title: 'Python Programming',
-        image: '/assets/python.webp',
+        image: '/assets/coding/python.webp',
         description: 'Fundamentals of Python programming',
         driveLinks: [
           // 'https://drive.google.com/part1',
@@ -912,7 +912,7 @@ const subjects: Subject[] = [
       {
         id: 'cpp-1',
         title: 'C++ Programming',
-        image: '/assets/cpp.png',
+        image: '/assets/coding/cpp.png',
         description: 'Introduction to C++ and object-oriented programming',
         driveLinks: [
           // 'https://drive.google.com/part1',
@@ -923,7 +923,7 @@ const subjects: Subject[] = [
       {
         id: 'javascript-1',
         title: 'JavaScript',
-        image: '/assets/javascript.jpg',
+        image: '/assets/coding/javascript.jpg',
         description: 'Learn JavaScript for web development',
         driveLinks: [
         //   'https://drive.google.com/part1',
@@ -934,7 +934,7 @@ const subjects: Subject[] = [
       {
         id: 'html-1',
         title: 'HTML',
-        image: '/assets/html.png',
+        image: '/assets/coding/html.png',
         description: 'Basics of HTML for web structuring',
         driveLinks: [
           // 'https://drive.google.com/part1',
@@ -945,7 +945,7 @@ const subjects: Subject[] = [
       {
         id: 'css-1',
         title: 'CSS',
-        image: '/assets/css.png',
+        image: '/assets/coding/css.png',
         description: 'Styling web pages with CSS',
         driveLinks: [
           // 'https://drive.google.com/part1',
@@ -956,7 +956,7 @@ const subjects: Subject[] = [
       {
         id: 'c-1',
         title: 'C Programming',
-        image: '/assets/c.png',
+        image: '/assets/coding/c.png',
         description: 'Introduction to C programming language',
         driveLinks: [
           // 'https://drive.google.com/part1',
@@ -967,7 +967,7 @@ const subjects: Subject[] = [
       {
         id: 'tailwind-1',
         title: 'Tailwind CSS',
-        image: '/assets/taliwind.png',
+        image: '/assets/coding/taliwind.png',
         description: 'Learn how to style websites using Tailwind CSS',
         driveLinks: [
           // 'https://drive.google.com/part1',
@@ -978,7 +978,7 @@ const subjects: Subject[] = [
       {
         id: 'bootstrap-1',
         title: 'Bootstrap',
-        image: '/assets/bootstrap.png',
+        image: '/assets/coding/bootstrap.png',
         description: 'Learn Bootstrap framework for responsive web design',
         driveLinks: [
           // 'https://drive.google.com/part1',
@@ -989,7 +989,7 @@ const subjects: Subject[] = [
       {
         id: 'java-1',
         title: 'Java Programming',
-        image: '/assets/java.png',
+        image: '/assets/coding/java.png',
         description: 'Object-oriented programming with Java',
         driveLinks: [
           // 'https://drive.google.com/part1',
@@ -1000,7 +1000,7 @@ const subjects: Subject[] = [
       {
         id: 'react-1',
         title: 'React',
-        image: '/assets/react.png',
+        image: '/assets/coding/react.png',
         description: 'Learn React for front-end development',
         driveLinks: [
           // 'https://drive.google.com/part1',
@@ -1011,7 +1011,7 @@ const subjects: Subject[] = [
       {
         id: 'kotlin-1',
         title: 'Kotlin',
-        image: '/assets/kotlin.avif',
+        image: '/assets/coding/kotlin.avif',
         description: 'Kotlin programming for Android development',
         driveLinks: [
           // 'https://drive.google.com/part1',
@@ -1022,7 +1022,7 @@ const subjects: Subject[] = [
       {
         id: 'sql-1',
         title: 'SQL',
-        image: '/assets/sql.jpeg',
+        image: '/assets/coding/sql.jpeg',
         description: 'Learn database management using SQL',
         driveLinks: [
           // 'https://drive.google.com/part1',
@@ -1033,7 +1033,7 @@ const subjects: Subject[] = [
       {
         id: 'github-1',
         title: 'GitHub & Version Control',
-        image: '/assets/github.jpg',
+        image: '/assets/coding/github.jpg',
         description: 'Learn Git and GitHub for version control',
         driveLinks: [
           // 'https://drive.google.com/part1',

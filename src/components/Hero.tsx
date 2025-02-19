@@ -66,7 +66,7 @@ export default function Profile() {
           muted
           playsInline
         >
-          <source src="/assets/video3.mp4" type="video/mp4" />
+          <source src="/assets/video3.webm" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_transparent_0%,_rgba(0,0,0,0.8)_100%)]" />
       </div>

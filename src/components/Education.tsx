@@ -96,39 +96,66 @@ const subjects: Subject[] = [
       },
       {
         id: 'physics-2',
-        title: 'Heat and Thermodynamics',
-        image: '/assets/thermodynamics.png',
+        title: 'Heat',
+        image: '/assets/heat.webp',
         description: 'Heat, energy, and their transformations',
         driveLinks: [ // Changed to array
           'https://drive.google.com/file/d/1cgMSF4ThC5QZz1AQnOuIWzrwVdonxAD4/view?usp=drive_link',
           'https://drive.google.com/file/d/1YUTHkOUKGDO8fxdzJsJrzNulcIgKimmM/view?usp=drive_link',
           'https://drive.google.com/file/d/1Ys5_0y3DWey5tgHSIpkNS32IfBR7JS7U/view?usp=drive_link',
+        
+        ]
+      },
+      {
+        id: 'physics-2',
+        title: 'Thermodynamics',
+        image: '/assets/thermodynamics.png',
+        description: 'Heat, energy, and their transformations',
+        driveLinks: [ // Changed to array
           'https://drive.google.com/file/d/1WpXlz4XebeemRe2GWmUJLddQDWPsUh9U/view?usp=drive_link',
           'https://drive.google.com/file/d/1azCNr0JgU9CKiqqC_vQ3JSWx3I0oYIkL/view?usp=drive_link'
         ]
       },
       {
         id: 'physics-7',
-        title: 'Rotational Motion',
-        image: 'https://plus.unsplash.com/premium_photo-1674677530857-ed558c650f31?q=80&w=1938&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        title: 'Rotational Motion-1',
+        image: '/assets/RM.jpg',
         description: 'Study of objects rotating around an axis',
         driveLinks: [ // Changed to array
           'https://drive.google.com/file/d/1atshpqN2MjpAA73jQLvM0Pzy-hV86Rem/view?usp=drive_link',
           'https://drive.google.com/file/d/1Ys9z4NnfD67n9--FYywDVEK8SsPb7D1B/view?usp=drive_link',
           'https://drive.google.com/file/d/1Wj9NbBxgMvxwLn7pputTJuBYrbA-EVZb/view?usp=drive_link',
+        
+        ]
+      },
+      {
+        id: 'physics-7',
+        title: 'Rotational Motion-2',
+        image: 'https://plus.unsplash.com/premium_photo-1674677530857-ed558c650f31?q=80&w=1938&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        description: 'Study of objects rotating around an axis',
+        driveLinks: [ // Changed to array
           'https://drive.google.com/file/d/1Wl6yZG8caqJ7H7Zr_73NGt97ikBAaBtE/view?usp=drive_link',
           'https://drive.google.com/file/d/1Wlgqvf7PF_HS5s78qcUwPQwPKHC7Og8j/view?usp=drive_link'
         ]
       },
       {
         id: 'physics-8',
-        title: 'Gravitation',
-        image: 'https://images.unsplash.com/photo-1722331329513-8c6570f58af3?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        title: 'Gravitation-1',
+        image: '/assets/gravitation.jpg',
         description: 'The force of attraction between masses',
         driveLinks: [ // Changed to array
           'https://drive.google.com/file/d/1b-wdMpjyKI6SNWb_V_JJAMeN_FsorIT3/view?usp=drive_link',
           'https://drive.google.com/file/d/1b5pmFMq1Uv_7geL7Vb-SDUOiP-OKlq-s/view?usp=drive_link',
           'https://drive.google.com/file/d/1qF7neLlb94TVDxDb6GumQ1Fg5Tld3_RZ/view?usp=drive_link',
+          
+        ]
+      },
+      {
+        id: 'physics-8',
+        title: 'Gravitation-2',
+        image: 'https://images.unsplash.com/photo-1722331329513-8c6570f58af3?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        description: 'The force of attraction between masses',
+        driveLinks: [ // Changed to array
           'https://drive.google.com/file/d/1afGi-zQ-pnVYktsb9n5x2sJTYy5tAan7/view?usp=drive_link',
           'https://drive.google.com/file/d/1b7DAFMv42RJ-9k1JWjcNOECYyTTLeZBx/view?usp=drive_link'
 
@@ -189,8 +216,7 @@ const subjects: Subject[] = [
           'https://drive.google.com/file/d/1XFU0I-tMmvX7UhaFz5GdZG3TbVcJKBpZ/view?usp=drive_link',
           'https://drive.google.com/file/d/1XOscLU-5ydyaMxPDhVj9HknpIpvcetzH/view?usp=drive_link',
           'https://drive.google.com/file/d/1XFpNo6pXCt62IwBHLHVqhfoWRZYrE03t/view?usp=drive_link',
-          'https://drive.google.com/file/d/1XS0p_gFljDfEQ1OuM8dGQgiYwalw58Bd/view?usp=drive_link',
-          'https://drive.google.com/file/d/1hXs7ccJ73AUp7TKP1zBIDkBQk8TCJmZB/view?usp=drive_link',
+          
           
          
         ]
@@ -201,7 +227,18 @@ const subjects: Subject[] = [
         image: 'https://plus.unsplash.com/premium_photo-1664302244254-0b614b519f19?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         description: 'Study of electric charges and their interactions',
         driveLinks: [ // Changed to array
-       'https://drive.google.com/file/d/1ht5fHl_K6gadJMeebzMFYXxga3W4cTyB/view?usp=drive_link',
+        'https://drive.google.com/file/d/1XS0p_gFljDfEQ1OuM8dGQgiYwalw58Bd/view?usp=drive_link',
+        'https://drive.google.com/file/d/1hXs7ccJ73AUp7TKP1zBIDkBQk8TCJmZB/view?usp=drive_link',
+        'https://drive.google.com/file/d/1ht5fHl_K6gadJMeebzMFYXxga3W4cTyB/view?usp=drive_link',
+       
+        ]
+      },
+      {
+        id: 'physics-13',
+        title: 'Electrostatics-3',
+        image: '/assets/electrostatics3.jpg',
+        description: 'Study of electric charges and their interactions',
+        driveLinks: [ // Changed to array
        'https://drive.google.com/file/d/1hvjNVluchCQHl2A0D-YXj61s9U9r3BQ_/view?usp=drive_link',
        'https://drive.google.com/file/d/1i3JqbHmP5o9o098FJWK1R4TxAv9M4hUW/view?usp=drive_link',
        'https://drive.google.com/file/d/1hfn4rtNqc-Sq5lZVWznUs8Zjx4DTA30O/view?usp=drive_link'
@@ -237,24 +274,85 @@ const subjects: Subject[] = [
       },
       {
         id: 'physics-14',
-        title: 'Magnetic Effects of Current and Magnetism',
+        title: 'Magnetic Effects of Current ',
+        image: '/assets/mec.png',
+        description: 'Understanding magnetic fields and their effects',
+        driveLinks: [ // Changed to array
+          'https://drive.google.com/file/d/1SUJFGY1JhzxyMN04JysQ51INOajuXKos/view?usp=drive_link',
+          'https://drive.google.com/file/d/1SS8ykFZSJDGTwGwufP5RAkFAMxq1yq8A/view?usp=drive_link',
+          'https://drive.google.com/file/d/1HphAQ6kQSsJQ7dylc-ZoPQgMQWMUGGpU/view?usp=drive_link',
+          'https://drive.google.com/file/d/1XePfbzbFwgH_VyT-l3ZTQvzk4M00xplf/view?usp=drive_link',
+         
+        ]
+      },
+      {
+        id: 'physics-14',
+        title: 'Magnetic Effects of Current-2 ',
+        image: '/assets/mec.png',
+        description: 'Understanding magnetic fields and their effects',
+        driveLinks: [ // Changed to array
+          'https://drive.google.com/file/d/1XR9NTv74_5RB42h344RmSDkz2BbXZcdm/view?usp=drive_link',
+          'https://drive.google.com/file/d/1k-suM5uxRnFJHFCuIuMZjN37CKEQDnlz/view?usp=drive_link',
+          'https://drive.google.com/file/d/1Xk9IuniLEWhn1E9XGYMKH4Q_MW4BMAII/view?usp=drive_link'
+        ]
+      },
+      {
+        id: 'physics-14',
+        title: ' Magnetism-1',
         image: 'https://plus.unsplash.com/premium_photo-1682309664650-6683b2fbc790?q=80&w=1824&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         description: 'Understanding magnetic fields and their effects',
         driveLinks: [ // Changed to array
-          'https://drive.google.com/part1',
-          'https://drive.google.com/part2',
-          'https://drive.google.com/part3'
+          'https://drive.google.com/file/d/1WE2hO0AEuSUwzAlQIGEHmZTo-PYWhva8/view?usp=drive_link',
+          'https://drive.google.com/file/d/1WI3Wv4VjVG0LSiulHtNN5GDnQDIyOCoQ/view?usp=drive_link',
+          'https://drive.google.com/file/d/1XTZfFxIm5v-UqsKLGz0A0-mHMG6rxDL_/view?usp=drive_link'
+          
+        ]
+      },
+      {
+        id: 'physics-14',
+        title: ' Magnetism-2',
+        image: '/assets/magnetism.jpg',
+        description: 'Understanding magnetic fields and their effects',
+        driveLinks: [ // Changed to array
+          'https://drive.google.com/file/d/1VcJGl2LYp2a6ipvANmaeIy8XorXfZMlB/view?usp=drive_link',
+          'https://drive.google.com/file/d/1ukiHVTkEImTV0E2HU5DaSecl7owqADis/view?usp=drive_link'
         ]
       },
       {
         id: 'physics-15',
-        title: 'Electromagnetic Induction and Alternating Currents',
+        title: ' Alternating Currents',
         image: 'https://plus.unsplash.com/premium_photo-1666942829260-08a5701ecee4?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         description: 'Study of induced currents and alternating current circuits',
         driveLinks: [ // Changed to array
-          'https://drive.google.com/part1',
-          'https://drive.google.com/part2',
-          'https://drive.google.com/part3'
+          'https://drive.google.com/file/d/1XF8UL9IMy7Qag-VrdD4Oi8lBF1D-m91Y/view?usp=drive_link',
+          'https://drive.google.com/file/d/1k4urVEK7FhEfM4Mfcaflfh0MJliGS4zM/view?usp=drive_link',
+          'https://drive.google.com/file/d/15--h9H12hsAaMRFkOkZKhEh3iH5s4WlO/view?usp=drive_link',
+          'https://drive.google.com/file/d/153pmSI8u52wp8QCwo8NnjwAzb6r6A3pC/view?usp=drive_link'
+        ]
+      },
+      {
+        id: 'physics-15',
+        title: ' Electromagnetic Induction-1',
+        image: '/assets/emi2.png',
+        description: 'Study of induced currents and alternating current circuits',
+        driveLinks: [ // Changed to array
+          'https://drive.google.com/file/d/1kXLuBUEsI9X_6MiEWpVdmWRlCJYw9MED/view?usp=drive_link',
+          'https://drive.google.com/file/d/1kPD8QCASBBI9ItaVq5Z7d0YCmrSfE_MF/view?usp=drive_link',
+          'https://drive.google.com/file/d/1k0PF7vZYZxzpeSBiTWvsCwUEfPKIla5V/view?usp=drive_link',
+       
+
+        ]
+      },
+      {
+        id: 'physics-15',
+        title: ' Electromagnetic Induction-2',
+        image: '/assets/emi.jpg',
+        description: 'Study of induced currents and alternating current circuits',
+        driveLinks: [ // Changed to array
+          'https://drive.google.com/file/d/14yVWC3eVhYPEnMWK4RxiHuFk5NJO4WHn/view?usp=drive_link',
+          'https://drive.google.com/file/d/1Yl2qPbb-u64WNV5FM0DYLPLorhbmwhsV/view?usp=drive_link',
+          'https://drive.google.com/file/d/1mnyUCuXdy8IncpFvP-F-cuI3K9BDoFoe/view?usp=drive_link',
+
         ]
       },
       {

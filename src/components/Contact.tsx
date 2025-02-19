@@ -101,10 +101,13 @@ export const Contact: React.FC = () => {
   const googleMapsUrl = `https://www.google.com/maps/place/Kalain,+Assam+788815/@24.970105,92.5576313,15.25z/data=!4m6!3m5!1s0x374fd3c8c0cfe905:0x3ea3a2b3a7d61847!8m2!3d24.9681463!4d92.5718122!16s%2Fg%2F11cjjznjsj?entry=ttu&g_ep=EgoyMDI1MDEyOS4xIKXMDSoJLDEwMjExMjM0SAFQAw%3D%3D`;
 
   return (
-    <section 
-  id="contact" 
-  className="py-20 bg-[#fffbe6] dark:bg-gray-900" // Light mode: soft yellow, Dark mode: gray-900
->
+    <section
+    id=""
+    className="py-20 bg-white dark:bg-[radial-gradient(circle_at_center,_#000000_0%,_#111827_100%)] relative overflow-hidden transition-colors duration-300"
+    style={{
+      backgroundColor: "rgba(255, 255, 204, 0.2)" // Slightly more visible light yellow accent
+    }}
+  >
       <div className="container mx-auto">
          <motion.div
                           initial={{ opacity: 0, y: 20 }}
@@ -129,91 +132,104 @@ export const Contact: React.FC = () => {
                         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Left Side: Info and Map */}
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="space-y-8"
-          >
-            <div className="prose dark:prose-invert">
-              <h3 className="text-2xl font-semibold text-purple-600 dark:text-purple-400">
-                {contactInfo.title}
-              </h3>
-              <p className="text-gray-600 dark:text-gray-400">
-                {contactInfo.description}
-              </p>
-            </div>
+         {/* Left Side: Info and Map */}
+<motion.div
+  initial={{ opacity: 0, x: -20 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  viewport={{ once: true }}
+  className="space-y-8"
+>
+  <div className="prose dark:prose-invert">
+    <h3 className="text-2xl font-semibold text-purple-600 dark:text-purple-400">
+      {contactInfo.title}
+    </h3>
+    <p className="text-gray-600 dark:text-gray-400">
+      {contactInfo.description}
+    </p>
+  </div>
 
-            <div className="space-y-4">
-              <div className="flex items-center space-x-3 text-gray-600 dark:text-gray-400">
-                <Mail className="w-5 h-5 text-blue-500" />
-                <a href={`mailto:${contactInfo.email}`} className="hover:text-blue-500 transition-colors">
-                  {contactInfo.email}
-                </a>
-              </div>
-              <div className="flex items-center space-x-3 text-gray-600 dark:text-gray-400">
-                <Phone className="w-5 h-5 text-blue-500" />
-                <a href={`tel:${contactInfo.phone}`} className="hover:text-blue-500 transition-colors">
-                  {contactInfo.phone}
-                </a>
-              </div>
-              <div className="flex items-center space-x-3 text-gray-600 dark:text-gray-400">
-                <MapPin className="w-5 h-5 text-blue-500" />
-                <span>{contactInfo.location.address}</span>
-              </div>
-            </div>
-
-            {/* Social Links */}
-            <div className="flex space-x-4">
-              {contactInfo.socials.map((social) => {
-                const Icon = getSocialIcon(social.icon);
-                return (
-                  <motion.a
-                    key={social.platform}
-                    href={social.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.95 }}
-                    className={cn(
-                      "p-2 rounded-full",
-                      "bg-blue-100 dark:bg-blue-900",
-                      "text-blue-500 dark:text-blue-400",
-                      "hover:bg-blue-200 dark:hover:bg-blue-800",
-                      "transition-colors duration-200"
-                    )}
-                    aria-label={`Visit ${social.platform}`}
-                  >
-                    <Icon className="w-5 h-5" />
-                  </motion.a>
-                );
-              })}
-            </div>
-
-            {/* Map */}
-            <div className="rounded-lg border border-gray-300 dark:border-gray-700 overflow-hidden shadow-lg transition-transform duration-200 transform hover:scale-105">
-  <a
-    href={googleMapsUrl}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="block relative group"
-  >
-    <img
-      src={mapUrl}
-      alt="Location Map"
-      className="w-full h-[250px] md:h-[300px] object-cover transition-shadow duration-200 group-hover:shadow-xl"
-    />
-    <div className={cn(
-      "absolute inset-0 bg-black/20 group-hover:bg-black/40", // Darker overlay on hover
-      "flex items-center justify-center",
-      "transition-all duration-200"
-    )}>
-      <MapPin
-        size={40}
-        className="text-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-200 transform scale-75 group-hover:scale-100" // Scale effect on hover
-      />
+  <div className="space-y-4">
+    {/* Email */}
+    <div className="flex items-center space-x-3 text-gray-600 dark:text-gray-400">
+      <Mail className="w-5 h-5 text-blue-500 transition-transform duration-200 hover:scale-110" />
+      <a 
+        href={`mailto:${contactInfo.email}`} 
+        className="hover:text-blue-500 transition-colors"
+        aria-label={`Email me at ${contactInfo.email}`}
+      >
+        {contactInfo.email}
+      </a>
     </div>
+
+    {/* Phone */}
+    <div className="flex items-center space-x-3 text-gray-600 dark:text-gray-400">
+      <Phone className="w-5 h-5 text-blue-500 transition-transform duration-200 hover:scale-110" />
+      <a 
+        href={`tel:${contactInfo.phone}`} 
+        className="hover:text-blue-500 transition-colors"
+        aria-label={`Call me at ${contactInfo.phone}`}
+      >
+        {contactInfo.phone}
+      </a>
+    </div>
+
+    {/* Address */}
+    <div className="flex items-center space-x-3 text-gray-600 dark:text-gray-400">
+      <MapPin className="w-5 h-5 text-blue-500 transition-transform duration-200 hover:scale-110" />
+      <span>{contactInfo.location.address}</span>
+    </div>
+  </div>
+
+  {/* Social Links */}
+  <div className="flex space-x-4">
+    {contactInfo.socials.map((social) => {
+      const Icon = getSocialIcon(social.icon);
+      return (
+        <motion.a
+          key={social.platform}
+          href={social.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+          className={cn(
+            "p-2 rounded-full",
+            "bg-blue-100 dark:bg-blue-900",
+            "text-blue-500 dark:text-blue-400",
+            "hover:bg-blue-200 dark:hover:bg-blue-800",
+            "transition-colors duration-200"
+          )}
+          aria-label={`Visit ${social.platform}`}
+        >
+          <Icon className="w-5 h-5" />
+        </motion.a>
+      );
+    })}
+  </div>
+
+  {/* Map */}
+  <div className="rounded-lg border border-gray-300 dark:border-gray-700 overflow-hidden shadow-lg transition-transform duration-200 transform hover:scale-105">
+    <a
+      href={googleMapsUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="block relative group"
+    >
+      <img
+        src={mapUrl}
+        alt="Location Map"
+        className="w-full h-[250px] md:h-[300px] object-cover transition-shadow duration-200 group-hover:shadow-xl"
+      />
+      <div className={cn(
+        "absolute inset-0 bg-black/20 group-hover:bg-black/40", // Darker overlay on hover
+        "flex items-center justify-center",
+        "transition-all duration-200"
+      )}>
+        <MapPin
+          size={40}
+          className="text-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-200 transform scale-75 group-hover:scale-100" // Scale effect on hover
+        />
+      </div>
   </a>
 </div>
           </motion.div>
@@ -403,78 +419,76 @@ export const Contact: React.FC = () => {
         </div>
 
         {/* FAQ Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mt-16"
-        >
-         <motion.div
-                          initial={{ opacity: 0, y: 20 }}
-                          whileInView={{ opacity: 1, y: 0 }}
-                          viewport={{ once: true, margin: "-100px" }}
-                          className="mb-16 text-center space-y-4"
-                        >
-                          <motion.h2
-                            initial={{ opacity: 0, scale: 0.95 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            transition={{ duration: 0.6 }}
-                            className="text-4xl md:text-5xl font-bold text-black dark:text-white" // Set to black in light mode and white in dark mode
-                          >
-                            Frequently Asked Questions
-                          </motion.h2>
-                          {/* <motion.div
-                            initial={{ width: 0 }}
-                            whileInView={{ width: "400px" }}
-                            transition={{ duration: 0.8, delay: 0.2 }}
-                            className="h-1 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 mx-auto rounded-full"
-                          /> */}
-                        </motion.div>
+<motion.div
+  initial={{ opacity: 0, y: 20 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  className="mt-16"
+>
+  <motion.div
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true, margin: "-100px" }}
+    className="mb-16 text-center space-y-4"
+  >
+    <motion.h2
+      initial={{ opacity: 0, scale: 0.95 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.6 }}
+      className="text-4xl md:text-5xl font-bold text-black dark:text-white"
+    >
+      Frequently Asked Questions
+    </motion.h2>
+  </motion.div>
 
-          <div className="max-w-2xl mx-auto space-y-4">
-            {contactInfo.faqs.map((faq) => (
-              <motion.div
-                key={faq.question}
-                initial={false}
-                animate={{ backgroundColor: expandedFAQ === faq.question ? 'rgba(147, 197, 253, 0.1)' : 'transparent' }}
-                className="rounded-lg overflow-hidden"
-              >
-                   <button
-                  onClick={() => setExpandedFAQ(expandedFAQ === faq.question ? null : faq.question)}
-                  className={cn(
-                    "w-full px-6 py-4 text-left",
-                    "flex items-center justify-between",
-                    "hover:bg-pink-50/50 dark:hover:bg-gray-800",
-                    "transition-colors duration-200"
-                  )}
-                >
-                  <span className="font-medium text-gray-700 dark:text-gray-300">
-                    {faq.question}
-                  </span>
-                  <ChevronDown
-                    className={cn(
-                      "w-5 h-5 text-gray-500 transition-transform duration-200",
-                      expandedFAQ === faq.question && "transform rotate-180"
-                    )}
-                  />
-                </button>
-                <AnimatePresence initial={false}>
-                  {expandedFAQ === faq.question && (
-                    <motion.div
-                      initial={{ height: 0 }}
-                      animate={{ height: 'auto' }}
-                      exit={{ height: 0 }}
-                      transition={{ duration: 0.2 }}
-                      className="overflow-hidden"
-                    >
-                      <p className="px-6 py-4 text-gray-600 dark:text-gray-400">
-                        {faq.answer}
-                      </p>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </motion.div>
-            ))}
+  <div className="max-w-2xl mx-auto space-y-4">
+    {contactInfo.faqs.map((faq) => (
+      <motion.div
+        key={faq.question}
+        initial={false}
+        animate={{ backgroundColor: expandedFAQ === faq.question ? 'rgba(147, 197, 253, 0.1)' : 'transparent' }}
+        className="rounded-lg overflow-hidden shadow-md transition-shadow duration-200"
+      >
+        <button
+          onClick={() => setExpandedFAQ(expandedFAQ === faq.question ? null : faq.question)}
+          className={cn(
+            "w-full px-6 py-4 text-left",
+            "flex items-center justify-between",
+            "hover:bg-blue-50 dark:hover:bg-gray-800",
+            "transition-colors duration-200 focus:outline-none"
+          )}
+          aria-expanded={expandedFAQ === faq.question}
+          aria-controls={`faq-answer-${faq.question.replace(/\s+/g, '-').toLowerCase()}`}
+        >
+          <span className="font-medium text-gray-700 dark:text-gray-300">
+            {faq.question}
+          </span>
+          <ChevronDown
+            className={cn(
+              "w-5 h-5 text-gray-500 transition-transform duration-200",
+              expandedFAQ === faq.question && "transform rotate-180"
+            )}
+          />
+        </button>
+        <AnimatePresence initial={false}>
+          {expandedFAQ === faq.question && (
+            <motion.div
+              id={`faq-answer-${faq.question.replace(/\s+/g, '-').toLowerCase()}`}
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: 'auto', opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="overflow-hidden"
+            >
+              <p className="px-6 py-4 text-gray-600 dark:text-gray-400">
+                {faq.answer}
+              </p>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </motion.div>
+    ))}
+ 
           </div>
         </motion.div>
       </div>
